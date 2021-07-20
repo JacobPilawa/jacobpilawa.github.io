@@ -1,9 +1,6 @@
 ---
-permalink: /
-title: "About"
-redirect_from:
-  - /about/
-  - /about.html
+permalink: /about/
+title: "about"
 ---
 
 this is a test 3
