@@ -48,4 +48,4 @@ gallery:
     title: "Wyoming Infrared Observatory"
 ---
 
-{% include gallery caption="Click on photos to expand. End of gallery." %}
+{% include gallery caption="" %}
