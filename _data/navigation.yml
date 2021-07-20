@@ -1,9 +1,7 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "research"
+    url: /research/
+  - title: "astrophotography"
+    url: /astrophotography/
   - title: "About"
     url: /about/
