@@ -2,55 +2,62 @@
 permalink: /astrophotography/
 title: "astrophotography"
 gallery:
+
   - url: /assets/astro/Fireworks Galaxy, Colgate, 2017.jpg
     image_path: /assets/astro/Fireworks Galaxy, Colgate, 2017.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "Fireworks Galaxy, Colgate, 2017"
+    title: "Fireworks Galaxy, Colgate, 2017"
+	 
   - url: /assets/astro/Fisheye, Colgate, 2016.jpg
     image_path: /assets/astro/Fisheye, Colgate, 2016.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "Fisheye, Colgate, 2016"
+    title: "Fisheye, Colgate, 2016"
+	 
   - url: /assets/astro/Jupiter 2020.png
     image_path: /assets/astro/Jupiter 2020.png
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "Jupiter 2020"
+    title: "Jupiter 2020"
+	 
   - url: /assets/astro/Lagoon Nebula, Colgate, 2017.JPG
     image_path: /assets/astro/Lagoon Nebula, Colgate, 2017.JPG
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "Lagoon Nebula, Colgate, 2017"
+    title: "Lagoon Nebula, Colgate, 2017"
+
   - url: /assets/astro/Messier 16, WIRO, 2018.jpg
     image_path: /assets/astro/Messier 16, WIRO, 2018.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "Messier 16, WIRO, 2018"
+    title: "Messier 16, WIRO, 2018"
+
   - url: /assets/astro/Moon, Sept. 30, 2021.jpg
     image_path: /assets/astro/Moon, Sept. 30, 2021.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "Moon, Sept. 30, 2021"
+    title: "Moon, Sept. 30, 2021"
+
   - url: /assets/astro/MW, Colgate, 2017.jpg
     image_path: /assets/astro/MW, Colgate, 2017.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "MW, Colgate, 2017"
+    title: "MW, Colgate, 2017"
+
   - url: /assets/astro/MW, July 4, 2021.jpg
     image_path: /assets/astro/MW, July 4, 2021.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "MW, July 4, 2021"
+    title: "MW, July 4, 2021"
+
   - url: /assets/astro/MW, WIRO, 2018.jpg
     image_path: /assets/astro/MW, WIRO, 2018.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "MW, WIRO, 2018"
+    title: "MW, WIRO, 2018"
+
   - url: /assets/astro/Winter Night, Nov 4, 2016.jpg
     image_path: /assets/astro/Winter Night, Nov 4, 2016.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "Winter Night, Nov 4, 2016"
+    title: "Winter Night, Nov 4, 2016"
+
   - url: /assets/astro/Wyoming Infrared Observatory.jpg
     image_path: /assets/astro/Wyoming Infrared Observatory.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    alt: "Wyoming Infrared Observatory"
+    title: "Wyoming Infrared Observatory"
 ---
-
-```liquid
-{% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
-```
 
 {% include gallery caption="This is a sample gallery with **Markdown support**." %}
 
