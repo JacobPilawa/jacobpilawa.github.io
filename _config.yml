@@ -114,3 +114,8 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+
+# photo settings
+imagesurl: "/assets/astro/"
+thumbsurl: "/assets/astro_thumb/"

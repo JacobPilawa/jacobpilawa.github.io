@@ -3,7 +3,7 @@ permalink: /research/
 title: "research"
 ---
 
-## List of Publications
+## Publications
 
 ### 2021
 
