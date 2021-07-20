@@ -2,5 +2,6 @@
 permalink: /astrophotography/
 title: "astrophotography"
 ---
-
-{% include my-gallery.html folder="/assets/astro" %}
+test1
+{% include image-gallery.html folder="/assets/astro" %}
+test2
