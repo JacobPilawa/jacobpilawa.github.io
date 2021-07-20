@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "Jacob Pilawa"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "2nd year graduate student in astrophysics at UC Berkeley. Studying the dynamics of stars."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
