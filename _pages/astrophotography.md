@@ -10,14 +10,14 @@ gallery:
     image_path: /assets/astro/Messier 16, WIRO, 2018.jpg
     alt: "Messier 16, WIRO, 2018"
     title: "Messier 16, WIRO, 2018"
-  - url: /assets/astro/Fisheye, Colgate, 2016.jpg
-    image_path: /assets/astro/Fisheye, Colgate, 2016.jpg
-    alt: "Fisheye, Colgate, 2016"
-    title: "Fisheye, Colgate, 2016" 
   - url: /assets/astro/Jupiter 2020.png
     image_path: /assets/astro/Jupiter 2020.png
     alt: "Jupiter 2020"
     title: "Jupiter 2020"
+  - url: /assets/astro/Fisheye, Colgate, 2016.jpg
+    image_path: /assets/astro/Fisheye, Colgate, 2016.jpg
+    alt: "Fisheye, Colgate, 2016"
+    title: "Fisheye, Colgate, 2016" 
   - url: /assets/astro/Lagoon Nebula, Colgate, 2017.JPG
     image_path: /assets/astro/Lagoon Nebula, Colgate, 2017.JPG
     alt: "Lagoon Nebula, Colgate, 2017"
