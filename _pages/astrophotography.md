@@ -6,6 +6,10 @@ gallery:
     image_path: /assets/astro/Fireworks Galaxy, Colgate, 2017.jpg
     alt: "Fireworks Galaxy, Colgate, 2017"
     title: "Fireworks Galaxy, Colgate, 2017"	 
+  - url: /assets/astro/Messier 16, WIRO, 2018.jpg
+    image_path: /assets/astro/Messier 16, WIRO, 2018.jpg
+    alt: "Messier 16, WIRO, 2018"
+    title: "Messier 16, WIRO, 2018"
   - url: /assets/astro/Fisheye, Colgate, 2016.jpg
     image_path: /assets/astro/Fisheye, Colgate, 2016.jpg
     alt: "Fisheye, Colgate, 2016"
@@ -18,10 +22,6 @@ gallery:
     image_path: /assets/astro/Lagoon Nebula, Colgate, 2017.JPG
     alt: "Lagoon Nebula, Colgate, 2017"
     title: "Lagoon Nebula, Colgate, 2017"
-  - url: /assets/astro/Messier 16, WIRO, 2018.jpg
-    image_path: /assets/astro/Messier 16, WIRO, 2018.jpg
-    alt: "Messier 16, WIRO, 2018"
-    title: "Messier 16, WIRO, 2018"
   - url: /assets/astro/Moon, Sept. 30, 2021.jpg
     image_path: /assets/astro/Moon, Sept. 30, 2021.jpg
     alt: "Moon, Sept. 30, 2021"
