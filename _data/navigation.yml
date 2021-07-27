@@ -5,3 +5,5 @@ main:
     url: /astrophotography/
   - title: "about me"
     url: /about/
+  - title: "cv"
+    url: /cv/
