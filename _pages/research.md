@@ -7,9 +7,8 @@ title: "research"
 
 ### 2021
 
-7. *Photonic reservoir computer using speckle in multimode waveguide ring resonators*, MN Ashner, U Paudel, M Luengo-Kovac, **J Pilawa**, GC Valley, Optics Express 29 (13), 19262-19277
+6. *Photonic reservoir computer using speckle in multimode waveguide ring resonators*, MN Ashner, U Paudel, M Luengo-Kovac, **J Pilawa**, GC Valley, Optics Express 29 (13), 19262-19277
 
-6. *Photonic reservoir computer with all-optical reservoir*, MN Ashner, U Paudel, M Luengo-Kovac, **J Pilawa**, TJ Shaw, GC Valley, AI and Optical Data Sciences II 11703, 117030L
 
 ### 2020
 
