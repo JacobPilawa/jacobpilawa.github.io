@@ -1,7 +1,7 @@
 ---
 permalink: /cv/
-title: "cv"
+title: "Curriculum Vitae"
 ---
 
 
-## [Click here to download my full CV.](https://jacobpilawa.github.io/assets/files/Curriculum_Vitae.pdf)
+#### Click [here](https://jacobpilawa.github.io/assets/files/Curriculum_Vitae.pdf) to download my full CV!
