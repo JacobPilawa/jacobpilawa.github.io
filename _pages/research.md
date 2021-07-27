@@ -1,6 +1,6 @@
 ---
 permalink: /research/
-title: "research"
+title: "Research"
 ---
 
 ## Publications

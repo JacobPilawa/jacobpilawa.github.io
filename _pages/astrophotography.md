@@ -1,6 +1,6 @@
 ---
 permalink: /astrophotography/
-title: "astrophotography"
+title: "Astrophotography"
 gallery:
   - url: /assets/astro/Fireworks Galaxy, Colgate, 2017.jpg
     image_path: /assets/astro/Fireworks Galaxy, Colgate, 2017.jpg
