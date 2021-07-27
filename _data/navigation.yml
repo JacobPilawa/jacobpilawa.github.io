@@ -1,6 +1,8 @@
 main:
   - title: "research"
     url: /research/
+  - title: "course notes"
+    url: /course_notes/
   - title: "astrophotography"
     url: /astrophotography/
   - title: "about me"
