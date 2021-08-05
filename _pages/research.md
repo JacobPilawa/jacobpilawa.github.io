@@ -20,15 +20,15 @@ Outside the realm of astrophysics, I have spent time in the Photonics department
 
 ### 2021
 
-6. *Photonic reservoir computer using speckle in multimode waveguide ring resonators*, MN Ashner, U Paudel, M Luengo-Kovac, **J Pilawa**, GC Valley, Optics Express 29 (13), 19262-19277
+6. *Probing below the neutrino floor with the first generation of stars*, C Ilie, C Levy, **J Pilawa**, S Zhang, arXiv preprint arXiv:2009.11478, submitted to PRD
+
+5. *Constraining Dark Matter properties with the first generation of stars*, C Ilie, C Levy, **J Pilawa**, S Zhang
+arXiv preprint arXiv:2009.11474, submitted to PRL
+
+4. *Photonic reservoir computer using speckle in multimode waveguide ring resonators*, MN Ashner, U Paudel, M Luengo-Kovac, **J Pilawa**, GC Valley, Optics Express 29 (13), 19262-19277
 
 
 ### 2020
-
-5. *Probing below the neutrino floor with the first generation of stars*, C Ilie, C Levy, **J Pilawa**, S Zhang, arXiv preprint arXiv:2009.11478, submitted to PRD
-
-4. *Constraining Dark Matter properties with the first generation of stars*, C Ilie, C Levy, **J Pilawa**, S Zhang
-arXiv preprint arXiv:2009.11474, submitted to PRL
 
 3. *Comment on “Multiscatter stellar capture of dark matter”*, C Ilie, **J Pilawa**, S Zhang, Physical Review D 102 (4), 048301
 
