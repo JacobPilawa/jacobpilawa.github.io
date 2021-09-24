@@ -12,3 +12,7 @@ I try to tidy up my course notes for future use, so here are some convenient lin
 #### Extragalactic Astrophysics and Cosmology 
 
 [GitHub Repo](https://github.com/JacobPilawa/extragalactic_astro_and_cosmology), [Download a PDF](https://www.jacobpilawa.github.io/assets/files/cosmology_notes.pdf)
+
+#### Stellar Populations and Galaxies
+
+[GitHub Repo](https://github.com/JacobPilawa/stellar_populations_and_galaxies), [Download a PDF (coming soon)]()
