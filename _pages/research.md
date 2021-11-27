@@ -20,6 +20,8 @@ Outside the realm of astrophysics, I have spent time in the Photonics department
 
 ### 2021
 
+7. *The MASSIVE Survey - XVII. A Triaxial Orbit-based Determination of the Black Hole Mass and Intrinsic Shape of Elliptical Galaxy NGC 2693*, **J. D. Pilawa**, C. M. Liepold, S. C. Delgado Andrade, J. L. Walsh, C.-P. Ma, M. E. Quenneville, J. E. Greene, J. P. Blakeslee, submitted to ApJ
+
 6. *Probing below the neutrino floor with the first generation of stars*, C Ilie, C Levy, **J Pilawa**, S Zhang, arXiv preprint arXiv:2009.11478, submitted to PRD
 
 5. *Constraining Dark Matter properties with the first generation of stars*, C Ilie, C Levy, **J Pilawa**, S Zhang
