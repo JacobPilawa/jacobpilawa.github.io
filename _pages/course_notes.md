@@ -5,14 +5,27 @@ title: "Course Notes"
 
 I try to tidy up my course notes for future use, so here are some convenient links to courses I have written up in the past. More to come, and these are always a work-in-progress. Let me know if these are helpful, or if you spot any obvious errors. 
 
+## Online e-Notes
+
+#### Astrophysical Fluid Dynamics
+
+[Here.](https://jacobpilawa.github.io/fluids/intro.html)
+
+#### Stellar Astrophysics (incomplete)
+
+[Here.](https://jacobpilawa.github.io/stars/intro.html)
+
+
+## PDFs Only
+
 #### Radiative Processes in Astrophysics 
 
-[GitHub Repo](https://github.com/JacobPilawa/astro207-course-notes), [Download a PDF](https://www.jacobpilawa.github.io/assets/files/radiation_notes.pdf)
+[Here.](https://github.com/JacobPilawa/astro207-course-notes)
 
 #### Extragalactic Astrophysics and Cosmology 
 
-[GitHub Repo](https://github.com/JacobPilawa/extragalactic_astro_and_cosmology), [Download a PDF](https://www.jacobpilawa.github.io/assets/files/cosmology_notes.pdf)
+[Here.](https://github.com/JacobPilawa/extragalactic_astro_and_cosmology)
 
 #### Stellar Populations and Galaxies
 
-[GitHub Repo](https://github.com/JacobPilawa/stellar_populations_and_galaxies), [Download a PDF (coming soon)]()
+[Here.](https://github.com/JacobPilawa/stellar_populations_and_galaxies)

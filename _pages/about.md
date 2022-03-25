@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About Me"
-excerpt: "about me"
+excerpt: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,6 +9,6 @@ redirect_from:
 ---
 
 
-I am a second year graduate student at the [University of California, Berkeley](https://astro.berkeley.edu/) studying the stellar kinematics and dynamics of nearby galaxies with Chung-Pei Ma. Before moving to Berkeley for graduate school, I attended [Colgate University](https://observatory.colgate.edu/) in upstate New York where I spent most of my time investigating novel methods of constraining dark matter's properties. I also spent some time at [The Aerospace Corporation](https://aerospace.org/), working on optical computing and photonic neural networks. 
+I am a second year graduate student at the [University of California, Berkeley](https://astro.berkeley.edu/) studying the supermassive black holes and the stellar kinematics of nearby galaxies with [Chung-Pei Ma](https://w.astro.berkeley.edu/~cpma/). Before moving to Berkeley for graduate school, I attended [Colgate University](https://observatory.colgate.edu/) in upstate New York where I studied novel methods of dark matter detection. I also spent some time at [The Aerospace Corporation](https://aerospace.org/), working on optical computing and photonic neural networks. 
 
 Outside of astronomy, I enjoy skateboarding, playing chess, listening to music, and finding a dark sky for astrophotography. 
