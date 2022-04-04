@@ -11,6 +11,11 @@ I try to tidy up my course notes for future use, so here are some convenient lin
 
 [Here.](https://jacobpilawa.github.io/fluids/intro.html)
 
+#### Stellar Populations & Galaxies
+
+[Here.](https://jacobpilawa.github.io/galaxies/intro.html)
+
+
 #### Stellar Astrophysics (incomplete)
 
 [Here.](https://jacobpilawa.github.io/stars/intro.html)
