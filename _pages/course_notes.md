@@ -20,6 +20,13 @@ I try to tidy up my course notes for future use, so here are some convenient lin
 
 [Here.](https://jacobpilawa.github.io/stars/intro.html)
 
+## Teaching Notebooks
+
+
+#### Optical and Infrared Astronomy + Intro to Python
+
+[Here.](https://jacobpilawa.github.io/astro120/intro.html)
+
 
 ## PDFs Only
 
