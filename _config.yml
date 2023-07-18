@@ -61,26 +61,24 @@ plugins:
 author:
   name   : "Jacob Pilawa"
   avatar : "/assets/images/bio-photo.jpeg"
-  bio    : "4th year graduate student in astrophysics at UC Berkeley.<br>🌌✨🔭💫🛰💻"
+  bio    : "4th year graduate student in astrophysics at UC Berkeley.<br>🔭🪐🌌✨🛰️💻👨‍💻🚀📡"
+  location : Berkeley, CA
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://jacobpilawa.github.io"
-#    - label: "Twitter"
-#      icon: "fab fa-fw fa-twitter-square"
-#      url: "https://twitter.com/jacobpilawa"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/jacobpilawa"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jacobpilawa"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-#      url: "https://instagram.com/"
 
 footer:
   links:
-#    - label: "Twitter"
-#      icon: "fab fa-fw fa-twitter-square"
-#      url: "https://twitter.com/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/jacobpilawa"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jacobpilawa"
