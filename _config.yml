@@ -60,8 +60,8 @@ plugins:
 
 author:
   name   : "Jacob Pilawa"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "4th year graduate student in astrophysics at UC Berkeley.🌌✨🔭💫🛰💻"
+  avatar : "/assets/images/bio-photo.jpeg"
+  bio    : "4th year graduate student in astrophysics at UC Berkeley.\🌌✨🔭💫🛰💻"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
