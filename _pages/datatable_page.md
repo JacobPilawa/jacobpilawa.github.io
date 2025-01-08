@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "DataTables Page"
-excerpt: "DT Page Excerpt"
 permalink: /datatable_page/
 ---
 
