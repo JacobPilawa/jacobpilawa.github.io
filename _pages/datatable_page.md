@@ -5,25 +5,58 @@ permalink: /datatable_page/
 datatable: true
 ---
 
-Food    | Quantity sold | Time sold         | Cashier
-------- | ------------- | ----------------- | -----------
-Apples  |   5           | 8-25-2022 9:00:01 | Bearbear
-Bananas |   10          | 8-25-2022 9:03:55 | Racc
-Kiwis   |   3           | 8-25-2022 9:06:37 | Mickey
-Oranges |   5           | 8-25-2022 9:07:24 | Bearbear
-{: .datatable}
+<div class="datatable-begin"></div>
 
+<table class="datatable">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Sample type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apples</td>
+      <td>A small, somewhat round ...</td>
+      <td>Fruit</td>
+      <td>Fuji</td>
+    </tr>
+    <tr>
+      <td>Bananas</td>
+      <td>A long and curved, often-yellow ...</td>
+      <td>Fruit</td>
+      <td>Snow</td>
+    </tr>
+    <tr>
+      <td>Kiwis</td>
+      <td>A small, hairy-skinned sweet ...</td>
+      <td>Fruit</td>
+      <td>Golden</td>
+    </tr>
+    <tr>
+      <td>Oranges</td>
+      <td>A spherical, orange-colored sweet ...</td>
+      <td>Fruit</td>
+      <td>Navel</td>
+    </tr>
+  </tbody>
+</table>
 
-<head>
-    <!--The lines below help include JQuery DataTables into Markdown files-->
-    {%- if page.datatable == true -%}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!--Add JQuery-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"> <!--add style sheet-->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script> <!--add dataTables-->
-    <script>
-        $(document).ready( function () {
-        $('table.datatable').DataTable();
-        } );
-    </script>
-    {% endif %}
-</head>
+<div class="datatable-end"></div>
+
+<!-- Add JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Add DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+<!-- Add DataTables JavaScript -->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('table.datatable').DataTable();
+  });
+</script>
