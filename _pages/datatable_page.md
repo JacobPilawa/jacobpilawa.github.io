@@ -2,6 +2,7 @@
 layout: default
 title: "DataTables Page"
 permalink: /datatable_page/
+datatable: true
 ---
 
 <h1>My Fancy DataTables Page</h1>
