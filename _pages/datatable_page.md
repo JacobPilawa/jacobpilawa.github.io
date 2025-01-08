@@ -7,68 +7,16 @@ datatable: true
 
 <h1>My Fancy DataTables Page</h1>
 
-<!-- Your table goes here -->
-<table id="myTable" class="display" cellspacing="0" width="100%">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Location</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Alice</td>
-            <td>25</td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>30</td>
-            <td>London</td>
-        </tr>
-        <tr>
-            <td>Charlie</td>
-            <td>35</td>
-            <td>Paris</td>
-        </tr>
-        <tr>
-            <td>David</td>
-            <td>40</td>
-            <td>Berlin</td>
-        </tr>
-        <tr>
-            <td>Eva</td>
-            <td>22</td>
-            <td>Madrid</td>
-        </tr>
-        <tr>
-            <td>Frank</td>
-            <td>29</td>
-            <td>Rome</td>
-        </tr>
-        <tr>
-            <td>Grace</td>
-            <td>33</td>
-            <td>Tokyo</td>
-        </tr>
-        <tr>
-            <td>Hank</td>
-            <td>31</td>
-            <td>Chicago</td>
-        </tr>
-        <tr>
-            <td>Ivy</td>
-            <td>27</td>
-            <td>London</td>
-        </tr>
-        <tr>
-            <td>Jack</td>
-            <td>34</td>
-            <td>New York</td>
-        </tr>
-    </tbody>
-</table>
+<div class="datatable-begin"></div>
+
+Food    | Description                           | Category | Sample type
+------- | ------------------------------------- | -------- | -----------
+Apples  | A small, somewhat round ...           | Fruit    | Fuji
+Bananas | A long and curved, often-yellow ...   | Fruit    | Snow
+Kiwis   | A small, hairy-skinned sweet ...      | Fruit    | Golden
+Oranges | A spherical, orange-colored sweet ... | Fruit    | Navel
+
+<div class="datatable-end"></div>
 
 <!-- Link to DataTables CSS and JS -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
