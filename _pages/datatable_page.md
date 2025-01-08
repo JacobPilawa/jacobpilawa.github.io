@@ -1,7 +1,5 @@
 ---
-layout: default
 title: "DataTables Page"
-permalink: /datatable_page/
 datatable: true
 ---
 
@@ -19,10 +17,10 @@ Oranges | A spherical, orange-colored sweet ... | Fruit    | Navel
 <div class="datatable-end"></div>
 
 <!-- Link to DataTables CSS and JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/2.2.0/css/dataTables.dataTables.css" />
-<script src="https://cdn.datatables.net/2.2.0/js/dataTables.js"></script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.js"></script>
+  
 <script>
 	$(document).ready( function () {
 	    $('#myTable').DataTable();
