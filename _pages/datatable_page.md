@@ -10,10 +10,33 @@ datatable: true
 <!-- Table Structure -->
 <table id="example" class="display">
   <thead>
-    <!-- The headers will be populated dynamically -->
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Office</th>
+      <th>Age</th>
+      <th>Start date</th>
+      <th>Salary</th>
+    </tr>
   </thead>
   <tbody>
-    <!-- Data will be loaded dynamically from CSV -->
+    <tr>
+      <td>Tiger Nixon</td>
+      <td>System Architect</td>
+      <td>Edinburgh</td>
+      <td>61</td>
+      <td>2011/04/25</td>
+      <td>$320,800</td>
+    </tr>
+    <tr>
+      <td>Garrett Winters</td>
+      <td>Accountant</td>
+      <td>Tokyo</td>
+      <td>63</td>
+      <td>2011/07/25</td>
+      <td>$170,750</td>
+    </tr>
+    <!-- Add more rows as needed -->
   </tbody>
 </table>
 
@@ -22,43 +45,9 @@ datatable: true
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.js"></script>
 
-<!-- CSV Parsing Library (PapaParse) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-
 <!-- DataTable Initialization Script -->
 <script>
-  $(document).ready(function() {
-    // Load CSV data and initialize DataTable
-    Papa.parse("test.csv", {
-      complete: function(results) {
-        var tableData = results.data;
-        
-        // Get column headers from the first row of the CSV
-        var columnHeaders = tableData[0];
-        
-        // Dynamically build the table headers
-        var thead = $('#example thead');
-        var headerRow = $('<tr>');
-        columnHeaders.forEach(function(header) {
-          headerRow.append('<th>' + header + '</th>');
-        });
-        thead.append(headerRow);
-
-        // Remove the first row from tableData (which is the header row)
-        tableData.shift();
-
-        // Initialize DataTable with dynamic data
-        var table = $('#example').DataTable();
-        
-        // Clear any pre-existing data
-        table.clear();
-
-        // Add data from CSV to the table
-        table.rows.add(tableData).draw();
-      }
-    });
-    
-    // Initialize DataTable
+  $(document).ready( function () {
     $('#example').DataTable();
   });
 </script>
