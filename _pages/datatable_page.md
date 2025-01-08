@@ -5,10 +5,10 @@ excerpt: "DT Page Excerpt"
 permalink: /datatable_page/
 ---
 
-<h1>My DataTables Page</h1>
+<h1>My Fancy DataTables Page</h1>
 
 <!-- Your table goes here -->
-<table id="myTable" class="display">
+<table id="myTable" class="display" cellspacing="0" width="100%">
     <thead>
         <tr>
             <th>Name</th>
@@ -32,6 +32,41 @@ permalink: /datatable_page/
             <td>35</td>
             <td>Paris</td>
         </tr>
+        <tr>
+            <td>David</td>
+            <td>40</td>
+            <td>Berlin</td>
+        </tr>
+        <tr>
+            <td>Eva</td>
+            <td>22</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Frank</td>
+            <td>29</td>
+            <td>Rome</td>
+        </tr>
+        <tr>
+            <td>Grace</td>
+            <td>33</td>
+            <td>Tokyo</td>
+        </tr>
+        <tr>
+            <td>Hank</td>
+            <td>31</td>
+            <td>Chicago</td>
+        </tr>
+        <tr>
+            <td>Ivy</td>
+            <td>27</td>
+            <td>London</td>
+        </tr>
+        <tr>
+            <td>Jack</td>
+            <td>34</td>
+            <td>New York</td>
+        </tr>
     </tbody>
 </table>
 
@@ -41,8 +76,17 @@ permalink: /datatable_page/
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 <script>
-    // Initialize DataTables
+    // Initialize DataTables with extra features
     $(document).ready(function() {
-        $('#myTable').DataTable();
+        $('#myTable').DataTable({
+            "paging": true,            // Enable pagination
+            "scrollY": "200px",       // Enable vertical scrolling with fixed height
+            "scrollCollapse": true,    // Allow scrolling to collapse when there are fewer rows than the height
+            "ordering": true,         // Enable sorting
+            "info": true,             // Show table information (e.g., "Showing 1 to 10 of 100 entries")
+            "lengthMenu": [5, 10, 15], // Allow users to choose the number of rows per page (e.g., 5, 10, 15 rows per page)
+            "searching": true,        // Enable search functionality
+            "autoWidth": false        // Disable automatic column width calculation
+        });
     });
 </script>
