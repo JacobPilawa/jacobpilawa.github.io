@@ -74,18 +74,4 @@ permalink: /datatable_page/
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
-<script>
-    // Initialize DataTables with extra features
-    $(document).ready(function() {
-        $('#myTable').DataTable({
-            "paging": true,            // Enable pagination
-            "scrollY": "200px",       // Enable vertical scrolling with fixed height
-            "scrollCollapse": true,    // Allow scrolling to collapse when there are fewer rows than the height
-            "ordering": true,         // Enable sorting
-            "info": true,             // Show table information (e.g., "Showing 1 to 10 of 100 entries")
-            "lengthMenu": [5, 10, 15], // Allow users to choose the number of rows per page (e.g., 5, 10, 15 rows per page)
-            "searching": true,        // Enable search functionality
-            "autoWidth": false        // Disable automatic column width calculation
-        });
-    });
-</script>
+new DataTable('#myTable');
