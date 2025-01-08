@@ -1,28 +1,29 @@
 ---
-title: "DataTables Page"
+layout: default
+title: Sample page
+permalink: /datatable_page/
 datatable: true
 ---
 
-<h1>My Fancy DataTables Page</h1>
+Food    | Quantity sold | Time sold         | Cashier
+------- | ------------- | ----------------- | -----------
+Apples  |   5           | 8-25-2022 9:00:01 | Bearbear
+Bananas |   10          | 8-25-2022 9:03:55 | Racc
+Kiwis   |   3           | 8-25-2022 9:06:37 | Mickey
+Oranges |   5           | 8-25-2022 9:07:24 | Bearbear
+{: .datatable}
 
-<div class="datatable-begin"></div>
 
-Food    | Description                           | Category | Sample type
-------- | ------------------------------------- | -------- | -----------
-Apples  | A small, somewhat round ...           | Fruit    | Fuji
-Bananas | A long and curved, often-yellow ...   | Fruit    | Snow
-Kiwis   | A small, hairy-skinned sweet ...      | Fruit    | Golden
-Oranges | A spherical, orange-colored sweet ... | Fruit    | Navel
-
-<div class="datatable-end"></div>
-
-<!-- Link to DataTables CSS and JS -->
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.css"/>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.js"></script>
-  
-<script>
-	$(document).ready( function () {
-	    $('#myTable').DataTable();
-	} );
-</script>
+<head>
+    <!--The lines below help include JQuery DataTables into Markdown files-->
+    {%- if page.datatable == true -%}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!--Add JQuery-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"> <!--add style sheet-->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script> <!--add dataTables-->
+    <script>
+        $(document).ready( function () {
+        $('table.datatable').DataTable();
+        } );
+    </script>
+    {% endif %}
+</head>
