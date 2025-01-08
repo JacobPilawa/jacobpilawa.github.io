@@ -11,32 +11,19 @@ datatable: true
 <table id="example" class="display">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Office</th>
-      <th>Age</th>
-      <th>Start date</th>
-      <th>Salary</th>
+      {% for header in site.data.test[0] %}
+        <th>{{ header }}</th>
+      {% endfor %}
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Tiger Nixon</td>
-      <td>System Architect</td>
-      <td>Edinburgh</td>
-      <td>61</td>
-      <td>2011/04/25</td>
-      <td>$320,800</td>
-    </tr>
-    <tr>
-      <td>Garrett Winters</td>
-      <td>Accountant</td>
-      <td>Tokyo</td>
-      <td>63</td>
-      <td>2011/07/25</td>
-      <td>$170,750</td>
-    </tr>
-    <!-- Add more rows as needed -->
+    {% for row in site.data.test %}
+      <tr>
+        {% for cell in row %}
+          <td>{{ cell }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
   </tbody>
 </table>
 
