@@ -29,7 +29,7 @@ datatable: true
 <script>
   $(document).ready(function() {
     // Load CSV data and initialize DataTable
-    Papa.parse("data/test.csv", {
+    Papa.parse("_data/test.csv", {
       download: true,
       complete: function(results) {
         var tableData = results.data;
