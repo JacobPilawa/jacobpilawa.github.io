@@ -24,34 +24,36 @@ datatable: true
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.js"></script>
 
-<!-- Papa Parse -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-
 <!-- DataTable Initialization Script -->
 <script>
-  // Load and parse the CSV file
-  Papa.parse('/assets/test.csv', {
-    download: true,
-    header: true, // Use the first row as headers
-    dynamicTyping: true, // Automatically convert types
-    complete: function(results) {
-      var headers = Object.keys(results.data[0]); // Get headers from the first row
+  // Fetch the text file containing the data
+  fetch('/assets/data.txt')
+    .then(response => response.text())
+    .then(data => {
+      // Split the file into lines
+      var lines = data.trim().split('\n');
+
+      // The first line contains the column names
+      var headers = lines[0].split(/\s+/); // Split by space or tab
+
       var tableHeaders = document.getElementById('table-headers');
       var tableBody = document.getElementById('table-body');
 
-      // Create table headers dynamically
+      // Create table headers dynamically based on the first line (headers)
       headers.forEach(function(header) {
         var th = document.createElement('th');
-        th.textContent = header;
+        th.textContent = header; // Use the header name directly
         tableHeaders.appendChild(th);
       });
 
-      // Create table rows dynamically
-      results.data.forEach(function(row) {
+      // Loop through the remaining lines (data rows)
+      lines.slice(1).forEach(function(line) {
+        var columns = line.split(/\s+/); // Split each line by space or tab
+        
         var tr = document.createElement('tr');
-        headers.forEach(function(header) {
+        columns.forEach(function(column) {
           var td = document.createElement('td');
-          td.textContent = row[header];
+          td.textContent = column;
           tr.appendChild(td);
         });
         tableBody.appendChild(tr);
@@ -59,6 +61,6 @@ datatable: true
 
       // Initialize DataTable after the table is populated
       $('#example').DataTable();
-    }
-  });
+    })
+    .catch(error => console.error('Error loading file:', error));
 </script>
