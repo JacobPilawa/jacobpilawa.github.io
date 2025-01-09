@@ -95,7 +95,12 @@ datatable: true
       });
 
       // Initialize DataTable after populating the table
-      $('#example').DataTable();
+      $('#example').DataTable( {
+		  	paging: false,
+            fixedColumns: true,
+            fixedHeader: true,
+            scrollX: true,
+      });
 
       // After DataTable is initialized, trigger MathJax to render LaTeX in the table
       MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
