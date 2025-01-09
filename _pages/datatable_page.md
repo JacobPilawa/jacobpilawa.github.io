@@ -100,14 +100,15 @@ datatable: true
         fixedColumns: true,
         fixedHeader: true,
         scrollX: true,
+  		autoWidth: true,  // Enable auto width for columns
         "columnDefs": [
-          {
-            "width": "20%",
-            "targets": 0
-          }
-        ],
-      });
-
+            // Optionally, set specific widths for individual columns if needed
+            {
+              "targets": 0,
+              "width": "20%"  // Adjust specific columns if required
+            }
+          ],
+        });
       // After DataTable is initialized, trigger MathJax to render LaTeX in the table
       MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
     })
