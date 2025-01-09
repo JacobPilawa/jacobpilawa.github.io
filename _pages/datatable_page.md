@@ -83,8 +83,8 @@ datatable: true
           const td = document.createElement('td');
           
           // Check if cell contains LaTeX (e.g., wrap with $$ for inline math or \[ \] for block math)
-          if (cell.includes('$$') || cell.includes('\\[')) {
-            td.innerHTML = '$$' + cell + '$$';  // Convert to LaTeX-friendly format
+          if (cell.includes('$')) {
+            td.innerHTML = '$' + cell + '$';  // Convert to LaTeX-friendly format
           } else {
             td.textContent = cell;  // Regular text
           }
