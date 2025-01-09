@@ -1,23 +1,23 @@
 Col. 1: Galaxy
 Col. 2: Distance (Mpc)
-Col. 3: MBH (Msun)
-Col. 4: MBH lower (68%)
-Col. 5: MBH upper (68%)
-Col. 6: method
-Col. 7: sigma (km/s)
-Col. 8: sigma lower (68%)
-Col. 9: sigma upper (68%)
-Col. 10: log(LV/Lsun)
-Col. 11: error in log(LV/Lsun)
-Col. 12: log(L_3.6/Lsun) -- Spitzer 3.6 um, from Sani et al. 2011
-Col. 13: error in log(L_3.6/Lsun)
-Col. 14: $$M_{bulge}$$/Msun
-Col. 15: radius of influence (arcsec)
+Col. 3: $$M_{BH}$$ ($$M_\odot$$)
+Col. 4: $$M_{BH}$$ lower (68%)
+Col. 5: $$M_{BH}$$ upper (68%)
+Col. 6: Method
+Col. 7: $$\sigma$$ (km/s)
+Col. 8: $$\sigma$$ lower (68%)
+Col. 9: $$\sigma$$ upper (68%)
+Col. 10: $$\log_{10}\left(L_{V}/L_\odot\right)$$
+Col. 11: Error in $$\log_{10}\left(L_{V}/L_\odot\right)$$
+Col. 12: $$\log_{10}\left(L_{3.6}/L_\odot\right)$$ -- Spitzer 3.6 $$\mu$$m, from Sani et al. 2011
+Col. 13: error in $$\log_{10}\left(L_{3.6}/L_\odot\right)$$
+Col. 14: $$M_{bulge}/M_\odot$$
+Col. 15: Radius of Influence (arcsec)
 Col. 16: Morphology -- (E)lliptical, S0, (S)piral
 Col. 17: Profile -- (P)ower-law, (I)ntermediate, (C)ore, (U)ndetermined
-Col. 18: Reff (V-band, arcsec)
-Col. 19: Reff (i-band, arcsec) -- SDSS DR7, from Beifiori et al. 2012
-Col. 20: Reff (3.6 um, arcsec) -- from Sani et al. 2011
+Col. 18: $$R_{eff}$$ (V-band, arcsec)
+Col. 19: $$R_{eff}$$ (i-band, arcsec) -- SDSS DR7, from Beifiori et al. 2012
+Col. 20: $$R_{eff}$$ (3.6 $$\mu$$m, arcsec) -- from Sani et al. 2011
 
 
 MW	0.008	4.1e6	3.5e6	4.7e6	star	103	83	123	0	0	0	0	0	43	S	N/A	0	0	0
