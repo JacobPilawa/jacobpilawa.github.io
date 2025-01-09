@@ -100,6 +100,12 @@ datatable: true
             fixedColumns: true,
             fixedHeader: true,
             scrollX: true,
+		  "columnDefs": [
+		          {
+		              "width": "20%",
+		              "targets": 0
+		          }
+		      ],
       });
 
       // After DataTable is initialized, trigger MathJax to render LaTeX in the table
