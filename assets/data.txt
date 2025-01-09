@@ -1,6 +1,6 @@
 Col. 1: Galaxy
 Col. 2: Distance (Mpc)
-Col. 3: \(M_{BH}\) (\(M_\odot\))
+Col. 3: \(M_{BH}\) (\(M_\odot)\)
 Col. 4: \(M_{BH}\) lower (68%)
 Col. 5: \(M_{BH}\) upper (68%)
 Col. 6: Method
