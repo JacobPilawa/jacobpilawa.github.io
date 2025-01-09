@@ -1,9 +1,18 @@
 ---
 layout: page
-title: "DataTable Page"
+title: "Black Hole Data"
 permalink: /datatable_page/
 datatable: true
 ---
+
+## Information
+
+* Currently including the following:
+	* [Revisiting the Scaling Relations of Black Hole Masses and Host Galaxy Properties](https://ui.adsabs.harvard.edu/abs/2013ApJ...764..184M/abstract)
+	* More to come.
+
+
+## Table
 
 <h1>My DataTable</h1>
 
