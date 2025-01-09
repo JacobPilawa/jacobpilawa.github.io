@@ -114,7 +114,7 @@ datatable: true
         const button = document.createElement('button');
         button.textContent = col;
         button.classList.add('column-button');
-        button.style.backgroundColor = '#FFCCCC';  // Initial soft red color
+        button.style.backgroundColor = '#CCFFCC';  // Initial soft green color
         button.style.marginRight = '10px';
         button.style.padding = '5px 10px';
         button.style.border = 'none';
