@@ -149,7 +149,6 @@ datatable: true
         fixedHeader: true,
         scrollX: true,
         autoWidth: true,  // Enable auto width for columns
-		lengthMenu: [10, 25, 50, { label: 'All', value: -1 }],
         "columnDefs": [
           {
             "targets": '_all',  // Apply to all columns
