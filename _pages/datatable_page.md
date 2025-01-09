@@ -12,14 +12,13 @@ datatable: true
 	* More to come.
 
 
-## Table
 
-<h1>My DataTable</h1>
+<h1>Black Hole Data</h1>
 
-<!-- Column Selector (Checkboxes for each column) -->
+<!-- Column Selector (Clickable buttons for each column) -->
 <div id="column-selector">
   <h3>Select Columns to Display:</h3>
-  <div id="checkbox-container"></div>
+  <div id="button-container"></div>
 </div>
 
 <!-- Table Structure -->
@@ -109,30 +108,37 @@ datatable: true
         tableBody.appendChild(tr);
       });
 
-      // Create checkboxes for each column
-      const checkboxContainer = document.getElementById('checkbox-container');
+      // Create clickable buttons for each column
+      const buttonContainer = document.getElementById('button-container');
       columns.forEach((col, index) => {
-        const label = document.createElement('label');
-        label.textContent = col;
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.checked = true;  // Initially, all columns are shown
-        checkbox.addEventListener('change', function() {
-          toggleColumn(index, checkbox.checked);
+        const button = document.createElement('button');
+        button.textContent = col;
+        button.classList.add('column-button');
+        button.style.backgroundColor = '#FFCCCC';  // Initial soft red color
+        button.style.marginRight = '10px';
+        button.style.padding = '5px 10px';
+        button.style.border = 'none';
+        button.style.cursor = 'pointer';
+        
+        button.addEventListener('click', function() {
+          toggleColumn(index, button);
         });
 
-        checkboxContainer.appendChild(label);
-        checkboxContainer.appendChild(checkbox);
-        checkboxContainer.appendChild(document.createElement('br'));
+        buttonContainer.appendChild(button);
       });
 
-      // Function to toggle visibility of columns
-      function toggleColumn(index, show) {
+      // Function to toggle visibility of columns and button color
+      function toggleColumn(index, button) {
         const table = $('#example').DataTable();
-        if (show) {
-          table.column(index).visible(true);
-        } else {
+        const isVisible = table.column(index).visible();
+        
+        // Toggle column visibility
+        if (isVisible) {
           table.column(index).visible(false);
+          button.style.backgroundColor = '#FFCCCC';  // Soft red
+        } else {
+          table.column(index).visible(true);
+          button.style.backgroundColor = '#CCFFCC';  // Soft green
         }
       }
 
@@ -156,3 +162,14 @@ datatable: true
     })
     .catch(error => console.error('Error loading file:', error));
 </script>
+
+<!-- Style for Column Buttons -->
+<style>
+  .column-button {
+    transition: background-color 0.3s ease;
+  }
+
+  .column-button:hover {
+    background-color: #FF9999;  /* Soft red hover */
+  }
+</style>
