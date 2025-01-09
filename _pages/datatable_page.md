@@ -82,9 +82,9 @@ datatable: true
         row.forEach(cell => {
           const td = document.createElement('td');
           
-          // Check if cell contains LaTeX (e.g., wrap with $$ for inline math or \[ \] for block math)
+          // Check if cell contains LaTeX (wrap with $ for inline math)
           if (cell.includes('$')) {
-            td.innerHTML = '$' + cell + '$';  // Convert to LaTeX-friendly format
+            td.innerHTML = cell;  // Leave as is for inline math
           } else {
             td.textContent = cell;  // Regular text
           }
@@ -95,17 +95,17 @@ datatable: true
       });
 
       // Initialize DataTable after populating the table
-      $('#example').DataTable( {
-		  	paging: false,
-            fixedColumns: true,
-            fixedHeader: true,
-            scrollX: true,
-		  "columnDefs": [
-		          {
-		              "width": "20%",
-		              "targets": 0
-		          }
-		      ],
+      $('#example').DataTable({
+        paging: false,
+        fixedColumns: true,
+        fixedHeader: true,
+        scrollX: true,
+        "columnDefs": [
+          {
+            "width": "20%",
+            "targets": 0
+          }
+        ],
       });
 
       // After DataTable is initialized, trigger MathJax to render LaTeX in the table
