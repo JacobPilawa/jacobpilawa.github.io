@@ -101,7 +101,6 @@ datatable: true
         fixedHeader: true,
         scrollX: true,
   		autoWidth: true,  // Enable auto width for columns
-          ],
         });
       // After DataTable is initialized, trigger MathJax to render LaTeX in the table
       MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
