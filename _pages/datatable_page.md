@@ -59,7 +59,7 @@ datatable: true
   }
 
   // Load and parse the custom file
-  fetch('/assets/test.txt')  // Path to your custom file
+  fetch('/assets/data.txt')  // Path to your custom file
     .then(response => response.text())
     .then(content => {
       // Parse the content of the file
