@@ -24,8 +24,10 @@ datatable: true
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/fc-4.1.0/fh-3.2.4/datatables.min.js"></script>
 
-<!-- Papa Parse (used for CSV parsing but can be removed here since we're not using CSV anymore) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<!-- MathJax for LaTeX rendering -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 <!-- Custom Data Parsing and Table Building -->
 <script>
@@ -79,7 +81,14 @@ datatable: true
         const tr = document.createElement('tr');
         row.forEach(cell => {
           const td = document.createElement('td');
-          td.textContent = cell;
+          
+          // Check if cell contains LaTeX (e.g., wrap with $$ for inline math or \[ \] for block math)
+          if (cell.includes('$$') || cell.includes('\\[')) {
+            td.innerHTML = '$$' + cell + '$$';  // Convert to LaTeX-friendly format
+          } else {
+            td.textContent = cell;  // Regular text
+          }
+          
           tr.appendChild(td);
         });
         tableBody.appendChild(tr);
@@ -87,6 +96,9 @@ datatable: true
 
       // Initialize DataTable after populating the table
       $('#example').DataTable();
+
+      // After DataTable is initialized, trigger MathJax to render LaTeX in the table
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
     })
     .catch(error => console.error('Error loading file:', error));
 

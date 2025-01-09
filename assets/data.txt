@@ -11,7 +11,7 @@ Col. 10: log(LV/Lsun)
 Col. 11: error in log(LV/Lsun)
 Col. 12: log(L_3.6/Lsun) -- Spitzer 3.6 um, from Sani et al. 2011
 Col. 13: error in log(L_3.6/Lsun)
-Col. 14: Mbulge/Msun
+Col. 14: $$M_{bulge}$$/Msun
 Col. 15: radius of influence (arcsec)
 Col. 16: Morphology -- (E)lliptical, S0, (S)piral
 Col. 17: Profile -- (P)ower-law, (I)ntermediate, (C)ore, (U)ndetermined
