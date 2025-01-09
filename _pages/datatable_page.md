@@ -14,7 +14,13 @@ datatable: true
 
 ## Table
 
-<h1>Black Hole Data</h1>
+<h1>My DataTable</h1>
+
+<!-- Column Selector (Checkboxes for each column) -->
+<div id="column-selector">
+  <h3>Select Columns to Display:</h3>
+  <div id="checkbox-container"></div>
+</div>
 
 <!-- Table Structure -->
 <table id="example" class="display">
@@ -103,23 +109,50 @@ datatable: true
         tableBody.appendChild(tr);
       });
 
+      // Create checkboxes for each column
+      const checkboxContainer = document.getElementById('checkbox-container');
+      columns.forEach((col, index) => {
+        const label = document.createElement('label');
+        label.textContent = col;
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = true;  // Initially, all columns are shown
+        checkbox.addEventListener('change', function() {
+          toggleColumn(index, checkbox.checked);
+        });
+
+        checkboxContainer.appendChild(label);
+        checkboxContainer.appendChild(checkbox);
+        checkboxContainer.appendChild(document.createElement('br'));
+      });
+
+      // Function to toggle visibility of columns
+      function toggleColumn(index, show) {
+        const table = $('#example').DataTable();
+        if (show) {
+          table.column(index).visible(true);
+        } else {
+          table.column(index).visible(false);
+        }
+      }
+
       // Initialize DataTable after populating the table
       $('#example').DataTable({
         paging: false,
         fixedColumns: true,
         fixedHeader: true,
         scrollX: true,
-  		autoWidth: true,  // Enable auto width for columns
-		"columnDefs": [
-		            {
-		              "targets": '_all',  // Apply to all columns
-		              "width": 'auto'  // Dynamically adjust column width
-		            },
-		          ],
-        });
+        autoWidth: true,  // Enable auto width for columns
+        "columnDefs": [
+          {
+            "targets": '_all',  // Apply to all columns
+            "width": 'auto'  // Dynamically adjust column width
+          },
+        ],
+      });
+
       // After DataTable is initialized, trigger MathJax to render LaTeX in the table
       MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
     })
     .catch(error => console.error('Error loading file:', error));
-
 </script>
