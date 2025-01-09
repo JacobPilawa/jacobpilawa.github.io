@@ -216,10 +216,12 @@ y = document.getElementById('table-body');
         fixedColumns: true,
         fixedHeader: true,
         scrollX: true,
+		autoWidth: true,  // Enable auto width for columns
         "columnDefs": [
+          // Optionally, set specific widths for individual columns if needed
           {
-            "width": "20%",
-            "targets": 0
+            "targets": 0,
+            "width": "20%"  // Adjust specific columns if required
           }
         ],
       });
