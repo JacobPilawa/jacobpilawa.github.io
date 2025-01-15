@@ -141,7 +141,9 @@ datatable: true
         fixedColumns: true,
         fixedHeader: true,
         scrollX: true,
+		searching: false,
         autoWidth: true,  // Enable auto width for columns
+		  
         "columnDefs": [
           {
             "targets": '_all',  // Apply to all columns
