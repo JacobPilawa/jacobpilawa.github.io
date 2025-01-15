@@ -50,23 +50,16 @@ datatable: true
     const lines = content.split('\n');
     let columns = [];
     let data = [];
-    let startParsingData = false;
-
-    // Parse columns from the first few lines
-    for (let line of lines) {
-      // Match lines like "Col. X: <Column Name>"
-      const match = line.match(/^Col\.\s*\d+: (.+)/);
-      if (match) {
-        columns.push(match[1]);
-      } else if (line.trim() === "") {
-        // Empty line marks the start of data
-        startParsingData = true;
-        continue;
-      }
-
-      // If we're past the empty line, parse the data rows
-      if (startParsingData && line.trim()) {
-        const row = line.trim().split(/\s+/);  // Split by whitespace (space/tab)
+    
+    // The first line contains the column names
+    const headerLine = lines[0].trim();
+    columns = headerLine.split('\t');  // Split by tab character for columns
+    
+    // Process the rest of the lines as data
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line) {
+        const row = line.split('\t');  // Split by tab character for rows
         data.push(row);
       }
     }
@@ -75,7 +68,7 @@ datatable: true
   }
 
   // Load and parse the custom file
-  fetch('/assets/data.txt')  // Path to your custom file
+  fetch('/assets/fulldatabase.txt')  // Path to your custom file
     .then(response => response.text())
     .then(content => {
       // Parse the content of the file
