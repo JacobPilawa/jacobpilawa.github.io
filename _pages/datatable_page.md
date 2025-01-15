@@ -8,7 +8,8 @@ datatable: true
 # Information
 
 * Currently including the following:
-	* [Revisiting the Scaling Relations of Black Hole Masses and Host Galaxy Properties](https://ui.adsabs.harvard.edu/abs/2013ApJ...764..184M/abstract)
+	* MM13: [Revisiting the Scaling Relations of Black Hole Masses and Host Galaxy Properties](https://ui.adsabs.harvard.edu/abs/2013ApJ...764..184M/abstract)
+	* S16: [Selection bias in dynamically measured supermassive black hole samples: its consequences and the quest for the most fundamental relation ](https://academic.oup.com/mnras/article/460/3/3119/2609473)
 	* More to come.
 
 
@@ -137,18 +138,6 @@ datatable: true
 
       // Initialize DataTable after populating the table
       $('#example').DataTable({
-        paging: false,
-        fixedColumns: false,
-        fixedHeader: true,
-        scrollX: true,
-		searching: false,
-        autoWidth: true,  // Enable auto width for columns
-		  
-        "columnDefs": [
-          {
-            "targets": '_all',  // Apply to all columns
-            "width": 'auto'  // Dynamically adjust column width
-          },
         ],
       });
 
