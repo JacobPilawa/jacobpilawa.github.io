@@ -139,7 +139,7 @@ datatable: true
       $('#example').DataTable({
         paging: false,
         fixedColumns: true,
-        fixedHeader: true,
+        //fixedHeader: true,
         scrollX: true,
 		searching: false,
         autoWidth: true,  // Enable auto width for columns
