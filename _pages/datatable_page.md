@@ -138,7 +138,19 @@ datatable: true
 
       // Initialize DataTable after populating the table
       $('#example').DataTable({
-
+		//         paging: false,
+		//         fixedColumns: false,
+		//         fixedHeader: true,
+		//         scrollX: true,
+		// 		   searching: false,
+		//         autoWidth: true,  // Enable auto width for columns
+		//
+		//         "columnDefs": [
+		//           {
+		//             "targets": '_all',  // Apply to all columns
+		//             "width": 'auto'  // Dynamically adjust column width
+		//           },
+		//         ],
       });
 
       // After DataTable is initialized, trigger MathJax to render LaTeX in the table
