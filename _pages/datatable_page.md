@@ -138,8 +138,8 @@ datatable: true
       // Initialize DataTable after populating the table
       $('#example').DataTable({
         paging: false,
-        fixedColumns: true,
-        //fixedHeader: true,
+        fixedColumns: false,
+        fixedHeader: true,
         scrollX: true,
 		searching: false,
         autoWidth: true,  // Enable auto width for columns
