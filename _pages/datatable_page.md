@@ -138,7 +138,7 @@ datatable: true
 
       // Initialize DataTable after populating the table
       $('#example').DataTable({
-        ],
+
       });
 
       // After DataTable is initialized, trigger MathJax to render LaTeX in the table
