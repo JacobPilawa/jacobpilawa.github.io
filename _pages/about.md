@@ -13,4 +13,4 @@ Hi everyone! I am a sixth year graduate student in astrophysics at the [Universi
 
 Before moving to Berkeley, I attended [Colgate University](https://observatory.colgate.edu/) in upstate New York where I studied novel methods of dark matter detection. I also spent some time at [The Aerospace Corporation](https://aerospace.org/), working on optical computing and photonic neural networks. 
 
-Outside of astronomy, I enjoy playing chess, baseball, running, and finding a dark sky for astrophotography. I also am a year-round volunteer for the [United States Jigsaw Puzzle Association](https://www.usajigsaw.org/), leading some of the competitor ranking and statistical analysis work. 
+Outside of astronomy, I enjoy playing chess, baseball, running, and finding a dark sky for astrophotography. I'm also a year-round volunteer for the [United States Jigsaw Puzzle Association](https://www.usajigsaw.org/), leading some of the competitor ranking and statistical analysis work. 
