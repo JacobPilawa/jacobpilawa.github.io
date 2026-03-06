@@ -61,7 +61,7 @@ plugins:
 author:
   name   : "Jacob Pilawa"
   avatar : "/assets/images/bio-photo.jpeg"
-  bio    : "6thth year graduate student in astrophysics at UC Berkeley.<br>🔭🪐🌌✨🛰️💻👨‍💻🚀📡"
+  bio    : "6th year graduate student in astrophysics at UC Berkeley.<br>🔭🪐🌌✨🛰️💻👨‍💻🚀📡"
   location : Berkeley, CA
   links:
     - label: "Email"

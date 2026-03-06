@@ -1,12 +1,14 @@
  /*! div style */
 .author-profile .author-profile-text {
-  filter: none;
-  opacity: 1;
+  filter: none !important;
+  opacity: 1 !important;
 }
 
-.author-profile img {
-  filter: none;
-  opacity: 1;
+.author-profile img,
+.author-profile .avatar {
+  filter: none !important;
+  opacity: 1 !important;
+  -webkit-filter: none !important;
 }
 
 .image-gallery {
