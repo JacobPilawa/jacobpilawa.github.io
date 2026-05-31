@@ -1,10 +1,8 @@
 main:
   - title: "Research"
     url: /research/
-  - title: "Course Notes"
-    url: /course_notes/
-  - title: "Astrophotography"
-    url: /astrophotography/
+  - title: "Projects"
+    url: /projects/
   - title: "About Me"
     url: /about/
   - title: "CV"
