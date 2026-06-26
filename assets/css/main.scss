@@ -45,6 +45,61 @@ body.layout--single .page__title:has(a[href$="/projects/"]) {
   line-height: 1.5;
 }
 
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 0.85rem 0 0.6rem;
+}
+
+.project-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  color: #222;
+  text-decoration: none;
+  background: #fafafa;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.project-card:hover {
+  border-color: #890000;
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+.project-card__thumb {
+  display: block;
+  overflow: hidden;
+  background: #111;
+}
+
+.project-card__thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.55;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.project-card:hover .project-card__thumb img {
+  opacity: 0.96;
+  transform: scale(1.02);
+}
+
+.project-card__title {
+  display: block;
+  padding: 0.62rem 0.72rem 0.68rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 .notes-grid {
   display: flex;
   flex-wrap: wrap;
@@ -211,6 +266,10 @@ body.layout--single .page__title:has(a[href$="/projects/"]) {
 }
 
 @media (max-width: 37.5em) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
   .photo-page {
     flex-basis: 88%;
     grid-template-columns: 1fr;

@@ -3,6 +3,57 @@ permalink: /projects/
 title: "Projects"
 ---
 
+<section class="project-section" id="projects-gallery">
+  <div class="project-section__header">
+    <h2>Projects</h2>
+    <p>Interactive tools, data visualizations, and small public-facing projects.</p>
+  </div>
+
+  <div class="project-grid">
+    <a class="project-card" href="https://jacobpilawa-abs-3d-zone-visualizer.hf.space" target="_blank" rel="noopener">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/abs.png" alt="ABS 3D zone visualizer screenshot">
+      </span>
+      <span class="project-card__title">MLB ABS vs. 3D Zone Strikes</span>
+    </a>
+
+    <a class="project-card" href="https://spws2026-review.vercel.app/" target="_blank" rel="noopener">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/spws.png" alt="Speed Puzzle World Series 2026 summary screenshot">
+      </span>
+      <span class="project-card__title">Speed Puzzle World Series 2026 Summary</span>
+    </a>
+
+    <a class="project-card" href="https://hl-dash.vercel.app/" target="_blank" rel="noopener">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/hl.png" alt="Half-Life speedrunning challenge screenshot">
+      </span>
+      <span class="project-card__title">Half-Life Community Speedrunning Challenge</span>
+    </a>
+
+    <a class="project-card" href="https://puzzleboard.streamlit.app/" target="_blank" rel="noopener">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/puzzleboard.png" alt="Puzzleboard screenshot">
+      </span>
+      <span class="project-card__title">Puzzleboard</span>
+    </a>
+
+    <a class="project-card" href="https://box-scorigami.streamlit.app/" target="_blank" rel="noopener">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/boxscore.png" alt="MLB Box-Scorigami screenshot">
+      </span>
+      <span class="project-card__title">MLB Box-Scorigami</span>
+    </a>
+
+    <a class="project-card" href="https://github.com/JacobPilawa/count_based_strikezone" target="_blank" rel="noopener">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/count_based_strikezone_all_contours.png" alt="Count Based Strikezone Size contour plot">
+      </span>
+      <span class="project-card__title">Count Based Strikezone Size</span>
+    </a>
+  </div>
+</section>
+
 <section class="project-section" id="course-notes">
   <div class="project-section__header">
     <h2>Course Notes</h2>
