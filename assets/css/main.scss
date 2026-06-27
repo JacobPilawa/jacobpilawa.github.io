@@ -14,6 +14,68 @@ search: false
   }
 }
 
+.sidebar .author__name {
+  margin-bottom: 0.1rem;
+  font-size: 1.28em;
+}
+
+.sidebar .author__bio {
+  margin-top: 0.1rem;
+}
+
+.sidebar .author__bio p {
+  margin-top: 0;
+}
+
+.sidebar .author__avatar {
+  text-align: left;
+}
+
+.author__avatar img {
+  margin-left: 0.9rem;
+  max-width: 132px;
+}
+
+.greedy-nav {
+  justify-content: center;
+}
+
+.greedy-nav .site-title,
+.greedy-nav .search__toggle {
+  display: none;
+}
+
+.greedy-nav .visible-links {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.greedy-nav .visible-links a {
+  padding-inline: 0.85rem;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+body.about-page .greedy-nav .visible-links a[href="/about/"]:before,
+html:has(link[rel="canonical"][href$="/about/"]) .greedy-nav .visible-links a[href="/about/"]:before,
+html:has(link[rel="canonical"][href$="/projects/"]) .greedy-nav .visible-links a[href="/projects/"]:before,
+html:has(link[rel="canonical"][href$="/research/"]) .greedy-nav .visible-links a[href="/research/"]:before,
+html:has(link[rel="canonical"][href$="/cv/"]) .greedy-nav .visible-links a[href="/cv/"]:before {
+  transform: scaleX(1);
+}
+
+.greedy-nav .visible-links a:before {
+  bottom: -0.12rem;
+  transition-duration: 0.04s;
+}
+
+.greedy-nav .greedy-nav__toggle {
+  position: absolute;
+  right: 0;
+}
+
 body.layout--single .page__title:has(a[href$="/projects/"]) {
   display: none;
 }
