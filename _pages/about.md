@@ -9,8 +9,8 @@ redirect_from:
 ---
 
 
-Hi everyone! I am a sixth year graduate student in astrophysics at the [University of California, Berkeley](https://astro.berkeley.edu/). I spend my time weighing supermassive black holes with [Chung-Pei Ma](https://w.astro.berkeley.edu/~cpma/) by measuring the motions of stars in other galaxies. 
+Hi everyone! I just graduated with my PhD in astrophysics from the [University of California, Berkeley](https://astro.berkeley.edu/). During graduate school, I spent my time weighing supermassive black holes with [Chung-Pei Ma](https://w.astro.berkeley.edu/~cpma/) by measuring the motions of stars in other galaxies. 
 
 Before moving to Berkeley, I attended [Colgate University](https://observatory.colgate.edu/) in upstate New York where I studied novel methods of dark matter detection. I also spent some time at [The Aerospace Corporation](https://aerospace.org/), working on optical computing and photonic neural networks. 
 
-Outside of astronomy, I enjoy playing chess, baseball, running, and finding a dark sky for astrophotography. I'm also a year-round volunteer for the [United States Jigsaw Puzzle Association](https://www.usajigsaw.org/), leading some of the competitor ranking and statistical analysis work. 
+Outside of astronomy, I enjoy playing chess, watching baseball, running, and finding a dark sky for astrophotography. I'm also a year-round volunteer for the [United States Jigsaw Puzzle Association](https://www.usajigsaw.org/), leading some of the competitor ranking and statistical analysis work. 

@@ -10,3 +10,5 @@ Prior to graduate school, I studied novel methods of dark matter detection with 
 ## Publications
 
 You can find a list of my publications on [Google Scholar](https://scholar.google.com/citations?hl=en&user=lMveinMAAAAJ&view_op=list_works&sortby=pubdate)!
+
+My PhD thesis "Stellar Dynamical Measurements of Supermassive Black Hole Masses and Implications for Host Galaxy Demographics" is available [here](/assets/files/Pilawa_UC_Berkeley_Thesis_Final.pdf).
