@@ -6,20 +6,30 @@ title: "Projects"
 <section class="project-section" id="projects-gallery">
   <div class="project-section__header">
     <h2>Projects</h2>
-    <p>Interactive tools, data visualizations, and small public-facing projects.</p>
+    <p>Interactive tools, data visualizations, and small projects.</p>
   </div>
 
   <div class="project-grid">
     <a class="project-card" href="https://jacobpilawa-abs-3d-zone-visualizer.hf.space" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/abs.png" alt="ABS 3D zone visualizer screenshot">
+        <span class="project-card__description">Interactive visualizer comparing automated ball-strike calls against a three-dimensional strike zone model.</span>
       </span>
       <span class="project-card__title">MLB ABS vs. 3D Zone Strikes</span>
+    </a>
+
+    <a class="project-card" href="https://jacobpilawa-crowdsource-vision.hf.space/" target="_blank" rel="noopener">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/puzz.png" alt="Jigsaw Puzzle Computer Vision Crowdsourcing Tool screenshot">
+        <span class="project-card__description">Crowdsourced automatic labeling tool for iteratively improving a jigsaw puzzle computer vision model.</span>
+      </span>
+      <span class="project-card__title">Jigsaw Puzzle Computer Vision Crowdsourcing Tool</span>
     </a>
 
     <a class="project-card" href="https://spws2026-review.vercel.app/" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/spws.png" alt="Speed Puzzle World Series 2026 summary screenshot">
+        <span class="project-card__description">"Vibe coded" interactive results website and visualization for the 2026 Speed Puzzle World Series!</span>
       </span>
       <span class="project-card__title">Speed Puzzle World Series 2026 Summary</span>
     </a>
@@ -27,6 +37,7 @@ title: "Projects"
     <a class="project-card" href="https://hl-dash.vercel.app/" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/hl.png" alt="Half-Life speedrunning challenge screenshot">
+        <span class="project-card__description">Dashboard showing results from a Half-Life speedrunning community challenge.</span>
       </span>
       <span class="project-card__title">Half-Life Community Speedrunning Challenge</span>
     </a>
@@ -34,6 +45,7 @@ title: "Projects"
     <a class="project-card" href="https://puzzleboard.streamlit.app/" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/puzzleboard.png" alt="Puzzleboard screenshot">
+        <span class="project-card__description">Dashboard, results database, and ranking system for competitions in the jigsaw speed puzzling community.</span>
       </span>
       <span class="project-card__title">Puzzleboard</span>
     </a>
@@ -41,6 +53,7 @@ title: "Projects"
     <a class="project-card" href="https://box-scorigami.streamlit.app/" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/boxscore.png" alt="MLB Box-Scorigami screenshot">
+        <span class="project-card__description">Exploration of rare and never-before-seen MLB box score combinations.</span>
       </span>
       <span class="project-card__title">MLB Box-Scorigami</span>
     </a>
@@ -48,6 +61,7 @@ title: "Projects"
     <a class="project-card" href="https://github.com/JacobPilawa/count_based_strikezone" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/count_based_strikezone_all_contours.png" alt="Count Based Strikezone Size contour plot">
+        <span class="project-card__description">Analysis of how called strike zone size changes across different ball-strike counts.</span>
       </span>
       <span class="project-card__title">Count Based Strikezone Size</span>
     </a>

@@ -73,6 +73,7 @@ body.layout--single .page__title:has(a[href$="/projects/"]) {
 }
 
 .project-card__thumb {
+  position: relative;
   display: block;
   overflow: hidden;
   background: #111;
@@ -90,6 +91,26 @@ body.layout--single .page__title:has(a[href$="/projects/"]) {
 .project-card:hover .project-card__thumb img {
   opacity: 0.96;
   transform: scale(1.02);
+}
+
+.project-card__description {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.55rem 0.58rem;
+  color: #fff;
+  font-size: 0.64rem;
+  font-weight: 600;
+  line-height: 1.22;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.22));
+  transition: opacity 0.18s ease;
+}
+
+.project-card:hover .project-card__description,
+.project-card:focus .project-card__description {
+  opacity: 1;
 }
 
 .project-card__title {

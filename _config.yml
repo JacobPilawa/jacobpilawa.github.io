@@ -62,7 +62,7 @@ plugins:
 author:
   name   : "Jacob Pilawa"
   avatar : "/assets/images/bio-photo.jpeg"
-  bio    : "Recent Astrophysics PhD graduate with a passion for data.<br>🔭🪐🌌✨🛰️💻👨‍💻🚀📡📊📈"
+  bio    : "Astrophysics PhD graduate with a passion for data.<br>🔭🪐🌌✨🛰️💻👨‍💻🚀📡📊📈"
   location : Berkeley, CA
   links:
     - label: "Email"
