@@ -10,6 +10,14 @@ title: "Projects"
   </div>
 
   <div class="project-grid">
+    <a class="project-card" href="https://www.instagram.com/knights_of_the_round_puzzle/" target="_blank" rel="noopener">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/brand_trends.PNG" alt="Puzzle Statistics and Visualizations thumbnail">
+        <span class="project-card__description">Instagram account showcasing some of my jigsaw puzzle statistics and data visualization work.</span>
+      </span>
+      <span class="project-card__title">Puzzle Statistics and Visualizations</span>
+    </a>
+
     <a class="project-card" href="https://jacobpilawa-abs-3d-zone-visualizer.hf.space" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/abs.png" alt="ABS 3D zone visualizer screenshot">
