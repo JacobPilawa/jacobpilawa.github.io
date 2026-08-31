@@ -15,7 +15,7 @@ title: "Projects"
         <img src="/assets/images/projects/puzz.png" alt="PiCo jigsaw puzzle computer vision interface">
         <span class="project-card__description">Computer vision system used by both individuals and professional competitions to track and analyze speed jigsaw puzzle progress.</span>
       </span>
-      <span class="project-card__title">PiCo: Jigsaw Puzzle Computer Vision</span>
+      <span class="project-card__title">PiCo: Jigsaw Puzzle Progress Tracking</span>
     </a>
 
     <a class="project-card" href="https://puzzletogether.vercel.app/" target="_blank" rel="noopener">
