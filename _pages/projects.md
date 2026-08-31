@@ -10,6 +10,22 @@ title: "Projects"
   </div>
 
   <div class="project-grid">
+    <a class="project-card" href="https://piececounter.vercel.app/" target="_blank" rel="noopener">
+      <span class="project-card__thumb project-card__thumb--logo">
+        <img src="/assets/images/projects/pico.png" alt="PiCo jigsaw puzzle piece logo">
+        <span class="project-card__description">Computer vision system used by both individuals and professional competitions to track and analyze speed jigsaw puzzle progress.</span>
+      </span>
+      <span class="project-card__title">PiCo: Jigsaw Puzzle Progress Tracking</span>
+    </a>
+
+    <a class="project-card" href="https://puzzletogether.vercel.app/" target="_blank" rel="noopener">
+      <span class="project-card__thumb project-card__thumb--square">
+        <img src="/assets/images/projects/puzzletogether.png" alt="Completed PuzzleTogether community jigsaw puzzle">
+        <span class="project-card__description">A 500 piece, community-designed jigsaw puzzle, similar to r/place.</span>
+      </span>
+      <span class="project-card__title">PuzzleTogether</span>
+    </a>
+
     <a class="project-card" href="https://www.instagram.com/knights_of_the_round_puzzle/" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/brand_trends.PNG" alt="Puzzle Statistics and Visualizations thumbnail">

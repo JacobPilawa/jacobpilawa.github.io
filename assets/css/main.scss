@@ -150,6 +150,16 @@ body.layout--single .page__title:has(a[href$="/projects/"]) {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+.project-card__thumb--logo img,
+.project-card__thumb--square img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.project-card__thumb--logo img {
+  padding: 1.1rem;
+}
+
 .project-card:hover .project-card__thumb img {
   opacity: 0.96;
   transform: scale(1.02);
