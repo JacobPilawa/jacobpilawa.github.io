@@ -11,15 +11,15 @@ title: "Projects"
 
   <div class="project-grid">
     <a class="project-card" href="https://piececounter.vercel.app/" target="_blank" rel="noopener">
-      <span class="project-card__thumb project-card__thumb--logo">
-        <img src="/assets/images/projects/pico.png" alt="PiCo jigsaw puzzle piece logo">
+      <span class="project-card__thumb">
+        <img src="/assets/images/projects/puzz.png" alt="PiCo jigsaw puzzle computer vision interface">
         <span class="project-card__description">Computer vision system used by both individuals and professional competitions to track and analyze speed jigsaw puzzle progress.</span>
       </span>
-      <span class="project-card__title">PiCo: Jigsaw Puzzle Progress Tracking</span>
+      <span class="project-card__title">PiCo: Jigsaw Puzzle Computer Vision</span>
     </a>
 
     <a class="project-card" href="https://puzzletogether.vercel.app/" target="_blank" rel="noopener">
-      <span class="project-card__thumb project-card__thumb--square">
+      <span class="project-card__thumb project-card__thumb--full">
         <img src="/assets/images/projects/puzzletogether.png" alt="Completed PuzzleTogether community jigsaw puzzle">
         <span class="project-card__description">A 500 piece, community-designed jigsaw puzzle, similar to r/place.</span>
       </span>
@@ -42,6 +42,7 @@ title: "Projects"
       <span class="project-card__title">MLB ABS vs. 3D Zone Strikes</span>
     </a>
 
+    {% comment %}
     <a class="project-card" href="https://jacobpilawa-crowdsource-vision.hf.space/" target="_blank" rel="noopener">
       <span class="project-card__thumb">
         <img src="/assets/images/projects/puzz.png" alt="Jigsaw Puzzle Computer Vision Crowdsourcing Tool screenshot">
@@ -49,6 +50,7 @@ title: "Projects"
       </span>
       <span class="project-card__title">Jigsaw Puzzle Computer Vision Crowdsourcing Tool</span>
     </a>
+    {% endcomment %}
 
     <a class="project-card" href="https://spws2026-review.vercel.app/" target="_blank" rel="noopener">
       <span class="project-card__thumb">
