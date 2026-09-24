@@ -18,7 +18,7 @@
         <a class="main-tab" href="#towers" data-view-link="towers">Towers</a>
         <a class="main-tab" href="#stages" data-view-link="stages">Stages</a>
         <a class="main-tab" href="#abilities" data-view-link="abilities">Abilities</a>
-        <a class="main-tab" href="#mechanics" data-view-link="mechanics">Mechanics</a>
+        <a class="main-tab" href="#important" data-view-link="important">Important Info</a>
       </nav>
       <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle dark mode">◐</button>
     </header>
@@ -55,7 +55,7 @@
       <section class="view-panel hidden reference-section" id="stages">
         <div class="section-bar">
           <div><span class="section-number">03</span><h1>Stages</h1></div>
-          <span class="section-count">33 maps · reverse variants</span>
+          <span class="section-count">35 maps · reverse variants</span>
         </div>
         <div class="toolbar">
           <label class="search-box"><span>⌕</span><input id="stageSearch" type="search" placeholder="Search stages" autocomplete="off" /><kbd>/</kbd></label>
@@ -63,6 +63,14 @@
         </div>
         <p class="stage-note">Availability groups are community labels; the game does not display official map difficulty categories.</p>
         <div class="stage-list" id="stageList"></div>
+        <div class="image-modal hidden" id="stageModal" role="dialog" aria-modal="true" aria-labelledby="stageModalCaption">
+          <div class="image-modal-backdrop" id="stageModalBackdrop"></div>
+          <div class="image-modal-card">
+            <button class="image-modal-close" id="stageModalClose" type="button" aria-label="Close stage image">×</button>
+            <img id="stageModalImage" src="" alt="" />
+            <div class="image-modal-caption" id="stageModalCaption"></div>
+          </div>
+        </div>
       </section>
 
       <section class="view-panel hidden reference-section" id="abilities">
@@ -73,10 +81,10 @@
         <div class="ability-directory" id="abilityDirectory"></div>
       </section>
 
-      <section class="view-panel hidden reference-section" id="mechanics">
+      <section class="view-panel hidden reference-section" id="important">
         <div class="section-bar">
-          <div><span class="section-number">05</span><h1>Mechanics</h1></div>
-          <span class="section-count">common rules and interactions</span>
+          <div><span class="section-number">05</span><h1>Important Info</h1></div>
+          <span class="section-count">type checks and tower rules</span>
         </div>
         <div class="reference-grid">
           <article class="reference-card">
@@ -98,12 +106,54 @@
             </ul>
           </article>
           <article class="reference-card">
-            <span class="reference-label">Common checks</span>
+            <span class="reference-label">Camo Bloons</span>
             <ul>
-              <li>Camo detection is separate from range.</li>
-              <li>Lead popping is separate from damage.</li>
-              <li>Purple Bloons block magic, fire, and plasma damage.</li>
-              <li>MOAB control includes slow, stun, knockback, and damage over time.</li>
+              <li>Attacks without Camo detection cannot target Camo Bloons.</li>
+              <li>Common detection: Ninja, Dart Monkey 0-2-0, Sniper Monkey 0-0-1, Monkey Ace 0-2-0, Wizard Monkey 0-0-2.</li>
+              <li>Support detection: Monkey Village 0-2-0, Mortar Monkey Signal Flare, Monkey Sub 3-0-0.</li>
+              <li>Etienne gives all monkeys Camo detection at level 11.</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">Lead Bloons</span>
+            <ul>
+              <li>Normal sharp attacks do not pop Lead.</li>
+              <li>Use explosions, fire, acid, or upgrades that add Lead popping.</li>
+              <li>Examples: Bomb Shooter, Tack Shooter 1-0-0, Wizard Monkey, Alchemist, Sniper Monkey 1-0-0.</li>
+              <li>Check both Lead and Camo when the rush is Camo Lead.</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">Purple Bloons</span>
+            <ul>
+              <li>Purple Bloons are immune to magic, fire, and plasma damage.</li>
+              <li>Use physical attacks, explosions, blades, darts, or boomerangs.</li>
+              <li>Do not rely on Wizard fire, Super Monkey plasma, or other magic damage alone.</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">Black · White · Zebra</span>
+            <ul>
+              <li>Black Bloons are immune to explosions.</li>
+              <li>White Bloons are immune to freezing.</li>
+              <li>Zebra Bloons are immune to both explosions and freezing.</li>
+              <li>Use a different damage type when a rush contains these properties.</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">Regrow · Fortified</span>
+            <ul>
+              <li>Regrow Bloons can restore layers if damage is too slow or stops between hits.</li>
+              <li>Use continuous damage, burst damage, or a Regrow-blocking effect.</li>
+              <li>Fortified Bloons have extra health. Plan for more damage than the normal version.</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">MOAB-class</span>
+            <ul>
+              <li>MOABs, BFBs, ZOMGs, DDTs, and BADs need dedicated damage or control.</li>
+              <li>Useful answers include MOAB Glue, MOAB Press, Maim MOAB, Icicle Impale, and high-damage abilities.</li>
+              <li>DDTs have Camo, Lead, and Black properties. Check all three.</li>
             </ul>
           </article>
           <article class="reference-card">
@@ -114,6 +164,15 @@
               <li>Ezili and Adora have a third ability at level 7.</li>
               <li>Jericho's sabotage kit starts at levels 2 and 3.</li>
               <li>Level 20 is the final upgrade and usually improves the main ability.</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">Quick check before a rush</span>
+            <ul>
+              <li>Can the defense target Camo?</li>
+              <li>Can it pop Lead?</li>
+              <li>Does the damage work on Purple, Black, or White Bloons?</li>
+              <li>Is there enough MOAB damage and DDT coverage?</li>
             </ul>
           </article>
         </div>

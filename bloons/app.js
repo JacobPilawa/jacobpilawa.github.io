@@ -1,5 +1,6 @@
 const heroImg = (file) => `assets/images/heroes/${file}.webp`;
 const towerImg = (file) => `assets/images/towers/${file}.png`;
+const stageImg = (id) => `assets/images/stages/${id}.${id === "magma-mixup" ? "png" : "webp"}`;
 const upgradeSheetKey = {
   Alchemist: "alchemist", BananaFarm: "farm", BombShooter: "bomb", BoomerangMonkey: "boomerang",
   DartMonkey: "dart", DartlingGunner: "dartling", GlueGunner: "glue", IceMonkey: "ice",
@@ -414,6 +415,7 @@ const stages = [
   stage("up-on-the-roof", "Up on the Roof", "intermediate", "Ranked arenas; category varies", "Long rooftop route with limited placement areas."),
   stage("garden", "Garden", "standard", "All Battle Arenas", "Grassy map with pools and separated placement areas."),
   stage("castle-ruins", "Castle Ruins", "standard", "All Battle Arenas", "Castle map with multiple ruins and water."),
+  stage("club-jammin", "Club Jammin'", "standard", "All Battle Arenas", "Cave route with water and two-way lane movement."),
   stage("koru", "Koru", "standard", "All Battle Arenas", "Spiral-shaped track."),
   stage("sands-of-time", "Sands of Time", "standard", "All Battle Arenas", "Hourglass-shaped route with water."),
   stage("glade", "Glade", "standard", "All Battle Arenas", "Forest map with pools of water."),
@@ -436,10 +438,74 @@ const stages = [
   stage("magma-mixup", "Magma Mixup", "advanced", "White Wasteland and above", "Lava-themed map with separated placement areas."),
   stage("bloon-bot-factory", "Bloon Bot Factory", "advanced-plus", "Lead Dungeon and above", "Factory platforms drop on a repeating round schedule."),
   stage("pirate-cove", "Pirate Cove", "advanced-plus", "Lead Dungeon and above", "Pirate-themed water map with separated land."),
+  stage("neo-highway", "Neo Highway", "advanced-plus", "Lead Dungeon and above", "Highway route with trucks, close lanes, and removable obstacles."),
   stage("ports", "Ports", "expert", "ZOMG Superdome and Hall of Masters", "Expert map with distributed water placement."),
   stage("inflection", "Inflection", "expert", "ZOMG Superdome and Hall of Masters", "Expert map with split path interactions."),
   stage("island-base", "Island Base", "special", "Clan Wars / event availability", "Special map with event-specific availability.")
 ];
+
+const heroTowerRecommendations = {
+  quincy: [
+    ["dart", "Dart Monkey", "Cheap early-game damage; Crossbow adds stronger single-target damage."],
+    ["boomerang", "Boomerang Monkey", "Ricochet attacks cover grouped bloons Quincy does not clear efficiently."],
+    ["glue", "Glue Gunner", "Slow effects keep bloons in Quincy’s arrow coverage longer."]
+  ],
+  gwendolin: [
+    ["tack", "Tack Shooter", "Close-range attack speed and fire damage benefit from Gwendolin’s nearby buff."],
+    ["bomb", "Bomb Shooter", "Explosive towers receive strong support from Heat It Up."],
+    ["village", "Monkey Village", "Village buffs stack with Gwendolin’s range and pierce support."]
+  ],
+  striker: [
+    ["bomb", "Bomb Shooter", "Primary pairing; Striker improves explosive damage and ability uptime."],
+    ["mortar", "Mortar Monkey", "Artillery Command supports Mortar damage and cooldowns."],
+    ["tack", "Tack Shooter", "Adds non-explosive cleanup for bloons that resist Bomb damage."]
+  ],
+  obyn: [
+    ["wizard", "Wizard Monkey", "Magic buff and Wall of Fire coverage pair directly with Obyn."],
+    ["druid", "Druid", "Magic support and damage improve inside Obyn’s aura."],
+    ["ninja", "Ninja Monkey", "Camo detection and magic damage fill early coverage gaps."]
+  ],
+  churchill: [
+    ["glue", "Glue Gunner", "Slow effects keep bloons in Churchill’s cannon and machine-gun range."],
+    ["ice", "Ice Monkey", "Brittle and slow effects increase the value of Churchill’s high damage."],
+    ["village", "Monkey Village", "Village support supplies Camo coverage, range, and cooldown reduction."]
+  ],
+  benjamin: [
+    ["farm", "Banana Farm", "Benjamin’s income and Farm income accelerate the same economy plan."],
+    ["ninja", "Ninja Monkey", "Reliable Camo coverage protects the defense while Benjamin levels."],
+    ["village", "Monkey Village", "Village support improves the defense without replacing the economy slot."]
+  ],
+  ezili: [
+    ["wizard", "Wizard Monkey", "Magic damage and Wall of Fire keep bloons inside Ezili’s curse effects."],
+    ["glue", "Glue Gunner", "Slow effects extend damage-over-time uptime and help against MOABs."],
+    ["farm", "Banana Farm", "Ezili scales into late rounds while Farms fund her expensive defense."]
+  ],
+  pat: [
+    ["tack", "Tack Shooter", "Dense close-range attacks benefit from Rallying Roar."],
+    ["super", "Super Monkey", "Super Monkey damage scales well with Pat’s temporary damage buff."],
+    ["boomerang", "Boomerang Monkey", "MOAB Press adds control while Pat supplies burst damage."]
+  ],
+  jericho: [
+    ["dartling", "Dartling Gunner", "Reliable damage lets Jericho focus on opponent pressure."],
+    ["ninja", "Ninja Monkey", "Camo and sabotage coverage protect the defense while cash is spent on sends."],
+    ["bomb", "Bomb Shooter", "Explosive control handles grouped bloons and MOAB pressure."]
+  ],
+  adora: [
+    ["super", "Super Monkey", "Adora directly buffs Super Monkeys and benefits from their high XP cost."],
+    ["village", "Monkey Village", "Village support improves Super Monkey range, cooldowns, and Camo access."],
+    ["farm", "Banana Farm", "Late-game Adora and Super Monkey plans need strong income."]
+  ],
+  etienne: [
+    ["dartling", "Dartling Gunner", "Global Camo detection removes a key Dartling requirement."],
+    ["tack", "Tack Shooter", "Etienne covers Camo so Tack can focus on damage and range paths."],
+    ["super", "Super Monkey", "Global Camo lets Super Monkey use damage paths without adding separate detection."]
+  ],
+  bonnie: [
+    ["glue", "Glue Gunner", "Slow effects keep bloons on minecart routes longer."],
+    ["tack", "Tack Shooter", "Close-range damage covers the track sections where minecarts detonate."],
+    ["village", "Monkey Village", "Village support adds detection and cooldown reduction to Bonnie’s control plan."]
+  ]
+};
 
 const heroFilterDefs = ["all", "starter", "support", "control", "economy", "late-game", "damage"];
 const towerFilterDefs = ["all", "Primary", "Military", "Magic", "Support"];
@@ -530,6 +596,11 @@ function renderHeroList() {
 function renderHeroDetail() {
   const hero = heroes.find((item) => item.id === selectedHero);
   if (!hero) return;
+  const heroAbilities = hero.abilities.map(([levelName, ability]) => {
+    const levelItem = hero.levels.find((item) => item.title === ability);
+    return { levelName, ability, detail: levelItem ? levelItem.detail : "Ability effect listed in the level table." };
+  });
+  const pairings = heroTowerRecommendations[hero.id] || [];
   byId("heroDetail").innerHTML = `
     <div class="detail-header">
       <img class="detail-portrait" src="${heroImg(hero.image)}" alt="${hero.name} portrait" />
@@ -540,7 +611,22 @@ function renderHeroDetail() {
       </div>
       <div class="detail-aside"><span class="detail-tag">${hero.tag}</span><span class="detail-price">place <strong>${hero.price}</strong></span></div>
     </div>
-    <div class="ability-row">${hero.abilities.map(([levelName, ability]) => `<span class="ability-chip"><b>${levelName}</b>${ability}</span>`).join("")}</div>
+    <div class="hero-block">
+      <div class="hero-block-heading"><h4>Abilities</h4><p>Unlock level and effect</p></div>
+      <div class="hero-ability-detail-grid">${heroAbilities.map(({ levelName, ability, detail }) => `
+        <div class="hero-ability-detail">
+          <span class="hero-ability-level">${levelName}</span>
+          <div><strong>${ability}</strong><p>${detail.replace(/^Ability:\s*/, "")}</p></div>
+        </div>`).join("")}</div>
+    </div>
+    <div class="hero-block">
+      <div class="hero-block-heading"><h4>Good tower pairings</h4><p>Use cases, not required builds</p></div>
+      <div class="hero-tower-grid">${pairings.map(([towerId, towerName, reason]) => `
+        <div class="hero-tower-card">
+          <img src="${towerImg(towers.find((tower) => tower.id === towerId).file)}" alt="${towerName}" />
+          <div><strong>${towerName}</strong><p>${reason}</p></div>
+        </div>`).join("")}</div>
+    </div>
     <div class="skin-row"><span class="skin-label">Alt heroes</span>${hero.alt.map((skin) => `<span class="skin-chip">${skin}</span>`).join("")}</div>
     <div class="level-title-row"><h4>Level-by-level changes</h4><p>Key unlocks are highlighted in lime.</p></div>
     <div class="level-grid">${hero.levels.map((item, index) => `<div class="level-item ${item.key ? "key-level" : ""}"><span class="level-number">${index + 1}</span><div><strong>${item.title}</strong><p>${item.detail}</p></div></div>`).join("")}</div>
@@ -609,14 +695,33 @@ function renderStageList() {
   }
   el.innerHTML = list.map((item, index) => `
     <article class="stage-card stage-${item.category}">
-      <div class="stage-card-mark"><span>${String(index + 1).padStart(2, "0")}</span></div>
+      <button class="stage-image-button" type="button" data-stage="${item.id}" aria-label="Open full image for ${item.name}">
+        <img src="${stageImg(item.id)}" alt="${item.name} map thumbnail" />
+      </button>
       <div class="stage-card-body">
-        <div class="stage-card-top"><h3>${item.name}</h3><span class="stage-category">${pretty(item.category)}</span></div>
+        <div class="stage-card-top"><h3><span class="stage-index">${String(index + 1).padStart(2, "0")}</span>${item.name}</h3><span class="stage-category">${pretty(item.category)}</span></div>
         <p>${item.notes}</p>
         <div class="stage-meta"><span>${item.availability}</span><span>${item.reverse ? "Reverse available" : "Standard only"}</span></div>
       </div>
     </article>
   `).join("");
+  el.querySelectorAll("[data-stage]").forEach((button) => button.addEventListener("click", () => openStageImage(button.dataset.stage)));
+}
+
+function openStageImage(stageId) {
+  const stage = stages.find((item) => item.id === stageId);
+  if (!stage) return;
+  byId("stageModalImage").src = stageImg(stage.id);
+  byId("stageModalImage").alt = `${stage.name} full map image`;
+  byId("stageModalCaption").textContent = stage.name;
+  byId("stageModal").classList.remove("hidden");
+  document.body.classList.add("modal-open");
+}
+
+function closeStageImage() {
+  byId("stageModal").classList.add("hidden");
+  document.body.classList.remove("modal-open");
+  byId("stageModalImage").src = "";
 }
 
 function setHeroFilter(next) {
@@ -642,6 +747,8 @@ function setStageFilter(next) {
 byId("heroSearch").addEventListener("input", (event) => { heroQuery = event.target.value.trim().toLowerCase(); renderHeroList(); renderHeroDetail(); });
 byId("towerSearch").addEventListener("input", (event) => { towerQuery = event.target.value.trim().toLowerCase(); renderTowerPicker(); renderTowerDetail(); });
 byId("stageSearch").addEventListener("input", (event) => { stageQuery = event.target.value.trim().toLowerCase(); renderStageList(); });
+byId("stageModalClose").addEventListener("click", closeStageImage);
+byId("stageModalBackdrop").addEventListener("click", closeStageImage);
 
 byId("themeToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark");
@@ -651,6 +758,7 @@ if (localStorage.getItem("bloonbook-theme") === "dark") document.body.classList.
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "/" && document.activeElement.tagName !== "INPUT") { event.preventDefault(); byId("heroSearch").focus(); }
+  if (event.key === "Escape") closeStageImage();
 });
 
 const viewLinks = document.querySelectorAll("[data-view-link]");
@@ -661,7 +769,7 @@ function setView(view) {
   history.replaceState(null, "", `#${view}`);
 }
 viewLinks.forEach((link) => link.addEventListener("click", () => setView(link.dataset.viewLink)));
-const initialView = ["heroes", "towers", "stages", "abilities", "mechanics"].includes(window.location.hash.slice(1)) ? window.location.hash.slice(1) : "heroes";
+const initialView = ["heroes", "towers", "stages", "abilities", "important"].includes(window.location.hash.slice(1)) ? window.location.hash.slice(1) : "heroes";
 setView(initialView);
 
 renderFilters("heroFilters", heroFilterDefs, heroFilter, setHeroFilter);
