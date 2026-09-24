@@ -98,10 +98,10 @@ kbd { padding: 3px 5px; border: 1px solid var(--line); border-radius: 4px; color
 .hero-ability-detail strong { display: block; font-size: 11px; line-height: 1.2; }
 .hero-ability-detail p { margin: 3px 0 0; color: var(--muted); font-size: 10px; line-height: 1.35; }
 .hero-tower-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
-.hero-tower-card { display: grid; grid-template-columns: 30px 1fr; gap: 8px; padding: 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); }
-.hero-tower-card img { width: 30px; height: 30px; padding: 2px; border-radius: 5px; object-fit: contain; background: var(--soft); }
-.hero-tower-card strong { display: block; font-size: 10px; line-height: 1.2; }
-.hero-tower-card p { margin: 3px 0 0; color: var(--muted); font-size: 9px; line-height: 1.3; }
+.hero-tower-card { display: grid; grid-template-columns: 40px 1fr; gap: 9px; padding: 9px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); }
+.hero-tower-card img { width: 40px; height: 40px; padding: 3px; border-radius: 5px; object-fit: contain; background: var(--soft); }
+.hero-tower-card strong { display: block; font-size: 11px; line-height: 1.2; }
+.hero-tower-card p { margin: 4px 0 0; color: var(--muted); font-size: 10px; line-height: 1.35; }
 
 .tower-picker { display: grid; grid-template-columns: repeat(11, 1fr); gap: 7px; padding-bottom: 22px; }
 .tower-tile { min-height: 80px; padding: 7px 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--muted); }
@@ -128,16 +128,16 @@ kbd { padding: 3px 5px; border: 1px solid var(--line); border-radius: 4px; color
 .path-heading { display: flex; justify-content: space-between; gap: 8px; }
 .path-heading h4 { margin: 0; font: 600 14px var(--display); letter-spacing: -.04em; }
 .path-heading span { color: var(--muted); font: 9px var(--mono); }
-.path-role { min-height: 30px; margin: 6px 0 13px; color: var(--muted); font-size: 10px; line-height: 1.35; }
+.path-role { min-height: 33px; margin: 6px 0 13px; color: var(--muted); font-size: 11px; line-height: 1.4; }
 .upgrade-list { display: flex; flex-direction: column; gap: 6px; }
-.upgrade { display: grid; grid-template-columns: 31px 1fr; gap: 8px; align-items: center; }
-.upgrade-icon { display: block; width: 31px; height: 31px; padding: 2px; border-radius: 5px; object-fit: contain; background: var(--soft); }
+.upgrade { display: grid; grid-template-columns: 46px 1fr; gap: 10px; align-items: center; }
+.upgrade-icon { display: block; width: 46px; height: 46px; padding: 3px; border-radius: 6px; object-fit: contain; background: var(--soft); }
 .upgrade-tier { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 5px; background: var(--soft); color: var(--muted); font: 9px var(--mono); }
 .path-column:nth-child(1) .upgrade-tier { color: #2b938c; background: rgba(116,212,206,.18); }
 .path-column:nth-child(2) .upgrade-tier { color: #b66725; background: rgba(242,163,101,.18); }
 .path-column:nth-child(3) .upgrade-tier { color: #685eb7; background: rgba(166,154,232,.2); }
-.upgrade strong { display: block; font-size: 10px; line-height: 1.2; }
-.upgrade small { display: block; margin-top: 2px; color: var(--faint); font-size: 8px; }
+.upgrade strong { display: block; font-size: 12px; line-height: 1.25; }
+.upgrade small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; line-height: 1.35; }
 .empty-state { padding: 35px; color: var(--muted); text-align: center; font-size: 12px; }
 
 .reference-section { padding-top: 44px; }

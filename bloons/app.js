@@ -444,66 +444,31 @@ const stages = [
   stage("island-base", "Island Base", "special", "Clan Wars / event availability", "Special map with event-specific availability.")
 ];
 
-const heroTowerRecommendations = {
-  quincy: [
-    ["dart", "Dart Monkey", "Cheap early-game damage; Crossbow adds stronger single-target damage."],
-    ["boomerang", "Boomerang Monkey", "Ricochet attacks cover grouped bloons Quincy does not clear efficiently."],
-    ["glue", "Glue Gunner", "Slow effects keep bloons in Quincy’s arrow coverage longer."]
-  ],
+const heroTowerBoosts = {
   gwendolin: [
-    ["tack", "Tack Shooter", "Close-range attack speed and fire damage benefit from Gwendolin’s nearby buff."],
-    ["bomb", "Bomb Shooter", "Explosive towers receive strong support from Heat It Up."],
-    ["village", "Monkey Village", "Village buffs stack with Gwendolin’s range and pierce support."]
+    ["tack", "Tack Shooter", "Heat It Up (L4) periodically boosts nearby monkeys' range and pierce. Place Tack inside Gwendolin's radius."]
   ],
   striker: [
-    ["bomb", "Bomb Shooter", "Primary pairing; Striker improves explosive damage and ability uptime."],
-    ["mortar", "Mortar Monkey", "Artillery Command supports Mortar damage and cooldowns."],
-    ["tack", "Tack Shooter", "Adds non-explosive cleanup for bloons that resist Bomb damage."]
+    ["bomb", "Bomb Shooter", "Explosive Support (L4) improves nearby Bomb Shooter explosive attacks. Artillery Command (L10) also boosts Bomb attack speed and ability cooldowns."],
+    ["mortar", "Mortar Monkey", "Explosive Support (L4) improves nearby Mortar explosive attacks. Artillery Command (L10) also boosts Mortar attack speed and ability cooldowns."]
   ],
   obyn: [
-    ["wizard", "Wizard Monkey", "Magic buff and Wall of Fire coverage pair directly with Obyn."],
-    ["druid", "Druid", "Magic support and damage improve inside Obyn’s aura."],
-    ["ninja", "Ninja Monkey", "Camo detection and magic damage fill early coverage gaps."]
-  ],
-  churchill: [
-    ["glue", "Glue Gunner", "Slow effects keep bloons in Churchill’s cannon and machine-gun range."],
-    ["ice", "Ice Monkey", "Brittle and slow effects increase the value of Churchill’s high damage."],
-    ["village", "Monkey Village", "Village support supplies Camo coverage, range, and cooldown reduction."]
+    ["wizard", "Wizard Monkey", "Magic Aura (L4 and L11) gives nearby Magic Monkeys extra range and pierce. Wizard Monkey is a Magic Monkey."]
   ],
   benjamin: [
-    ["farm", "Banana Farm", "Benjamin’s income and Farm income accelerate the same economy plan."],
-    ["ninja", "Ninja Monkey", "Reliable Camo coverage protects the defense while Benjamin levels."],
-    ["village", "Monkey Village", "Village support improves the defense without replacing the economy slot."]
+    ["tack", "Tack Shooter", "Biohack (L3) temporarily increases attack speed for nearby monkeys. Affected towers cannot damage MOAB-class bloons during Biohack."]
   ],
   ezili: [
-    ["wizard", "Wizard Monkey", "Magic damage and Wall of Fire keep bloons inside Ezili’s curse effects."],
-    ["glue", "Glue Gunner", "Slow effects extend damage-over-time uptime and help against MOABs."],
-    ["farm", "Banana Farm", "Ezili scales into late rounds while Farms fund her expensive defense."]
+    ["druid", "Druid", "Sacrificial Totem (L7) grants nearby monkeys range, pierce, and attack speed in exchange for lives. Keep Druid inside the totem radius."]
   ],
   pat: [
-    ["tack", "Tack Shooter", "Dense close-range attacks benefit from Rallying Roar."],
-    ["super", "Super Monkey", "Super Monkey damage scales well with Pat’s temporary damage buff."],
-    ["boomerang", "Boomerang Monkey", "MOAB Press adds control while Pat supplies burst damage."]
-  ],
-  jericho: [
-    ["dartling", "Dartling Gunner", "Reliable damage lets Jericho focus on opponent pressure."],
-    ["ninja", "Ninja Monkey", "Camo and sabotage coverage protect the defense while cash is spent on sends."],
-    ["bomb", "Bomb Shooter", "Explosive control handles grouped bloons and MOAB pressure."]
+    ["tack", "Tack Shooter", "Rallying Roar (L3) temporarily gives nearby towers attack speed and damage. Place Tack within Pat's aura."]
   ],
   adora: [
-    ["super", "Super Monkey", "Adora directly buffs Super Monkeys and benefits from their high XP cost."],
-    ["village", "Monkey Village", "Village support improves Super Monkey range, cooldowns, and Camo access."],
-    ["farm", "Banana Farm", "Late-game Adora and Super Monkey plans need strong income."]
+    ["super", "Super Monkey", "Super Aura (L2 and L11) gives nearby Super Monkeys extra range and pierce. Super Monkey is the tower class named by the aura."]
   ],
   etienne: [
-    ["dartling", "Dartling Gunner", "Global Camo detection removes a key Dartling requirement."],
-    ["tack", "Tack Shooter", "Etienne covers Camo so Tack can focus on damage and range paths."],
-    ["super", "Super Monkey", "Global Camo lets Super Monkey use damage paths without adding separate detection."]
-  ],
-  bonnie: [
-    ["glue", "Glue Gunner", "Slow effects keep bloons on minecart routes longer."],
-    ["tack", "Tack Shooter", "Close-range damage covers the track sections where minecarts detonate."],
-    ["village", "Monkey Village", "Village support adds detection and cooldown reduction to Bonnie’s control plan."]
+    ["dartling", "Dartling Gunner", "Global Camo (L11) gives every monkey Camo detection. Dartling can target Camo without buying its own Camo upgrade."]
   ]
 };
 
@@ -600,7 +565,16 @@ function renderHeroDetail() {
     const levelItem = hero.levels.find((item) => item.title === ability);
     return { levelName, ability, detail: levelItem ? levelItem.detail : "Ability effect listed in the level table." };
   });
-  const pairings = heroTowerRecommendations[hero.id] || [];
+  const pairings = heroTowerBoosts[hero.id] || [];
+  const pairingBlock = pairings.length ? `
+    <div class="hero-block">
+      <div class="hero-block-heading"><h4>Good tower pairings</h4><p>Direct hero effects only</p></div>
+      <div class="hero-tower-grid">${pairings.map(([towerId, towerName, reason]) => `
+        <div class="hero-tower-card">
+          <img src="${towerImg(towers.find((tower) => tower.id === towerId).file)}" alt="${towerName}" />
+          <div><strong>${towerName}</strong><p>${reason}</p></div>
+        </div>`).join("")}</div>
+    </div>` : "";
   byId("heroDetail").innerHTML = `
     <div class="detail-header">
       <img class="detail-portrait" src="${heroImg(hero.image)}" alt="${hero.name} portrait" />
@@ -619,14 +593,7 @@ function renderHeroDetail() {
           <div><strong>${ability}</strong><p>${detail.replace(/^Ability:\s*/, "")}</p></div>
         </div>`).join("")}</div>
     </div>
-    <div class="hero-block">
-      <div class="hero-block-heading"><h4>Good tower pairings</h4><p>Use cases, not required builds</p></div>
-      <div class="hero-tower-grid">${pairings.map(([towerId, towerName, reason]) => `
-        <div class="hero-tower-card">
-          <img src="${towerImg(towers.find((tower) => tower.id === towerId).file)}" alt="${towerName}" />
-          <div><strong>${towerName}</strong><p>${reason}</p></div>
-        </div>`).join("")}</div>
-    </div>
+    ${pairingBlock}
     <div class="skin-row"><span class="skin-label">Alt heroes</span>${hero.alt.map((skin) => `<span class="skin-chip">${skin}</span>`).join("")}</div>
     <div class="level-title-row"><h4>Level-by-level changes</h4><p>Key unlocks are highlighted in lime.</p></div>
     <div class="level-grid">${hero.levels.map((item, index) => `<div class="level-item ${item.key ? "key-level" : ""}"><span class="level-number">${index + 1}</span><div><strong>${item.title}</strong><p>${item.detail}</p></div></div>`).join("")}</div>
