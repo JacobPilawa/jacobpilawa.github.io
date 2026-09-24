@@ -633,23 +633,6 @@ function renderHeroDetail() {
   `;
 }
 
-function renderAbilityDirectory() {
-  const abilityRows = heroes.flatMap((hero) => hero.abilities.map(([levelName, ability]) => {
-    const levelItem = hero.levels.find((item) => item.title === ability);
-    return { hero, levelName, ability, detail: levelItem ? levelItem.detail : "Ability effect listed in the hero's level table." };
-  }));
-  byId("abilityDirectory").innerHTML = abilityRows.map(({ hero, levelName, ability, detail }) => `
-    <article class="ability-card">
-      <img src="${heroImg(hero.image)}" alt="${hero.name}" />
-      <div>
-        <span class="ability-meta">${hero.name} · ${levelName}</span>
-        <h3>${ability}</h3>
-        <p>${detail}</p>
-      </div>
-    </article>
-  `).join("");
-}
-
 function towerMatches(tower) {
   const haystack = [tower.name, tower.className, tower.role, ...tower.paths.flatMap((item) => [item.name, item.role, ...item.upgrades])].join(" ").toLowerCase();
   return (towerFilter === "all" || tower.className === towerFilter) && haystack.includes(towerQuery);
@@ -769,7 +752,7 @@ function setView(view) {
   history.replaceState(null, "", `#${view}`);
 }
 viewLinks.forEach((link) => link.addEventListener("click", () => setView(link.dataset.viewLink)));
-const initialView = ["heroes", "towers", "stages", "abilities", "important"].includes(window.location.hash.slice(1)) ? window.location.hash.slice(1) : "heroes";
+const initialView = ["heroes", "towers", "stages", "important"].includes(window.location.hash.slice(1)) ? window.location.hash.slice(1) : "heroes";
 setView(initialView);
 
 renderFilters("heroFilters", heroFilterDefs, heroFilter, setHeroFilter);
@@ -777,7 +760,6 @@ renderFilters("towerFilters", towerFilterDefs, towerFilter, setTowerFilter);
 renderFilters("stageFilters", stageFilterDefs, stageFilter, setStageFilter);
 renderHeroList();
 renderHeroDetail();
-renderAbilityDirectory();
 renderTowerPicker();
 renderTowerDetail();
 renderStageList();
