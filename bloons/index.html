@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BTDB2 Reference</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2310212d'/%3E%3Cpath d='M8 9h16v4H18v10h-4V13H8z' fill='%23d9f477'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#heroes" data-view-link="heroes"><span class="brand-mark">B2</span><span>BTDB2 reference</span></a>
+      <nav class="main-tabs" aria-label="Reference sections">
+        <a class="main-tab active" href="#heroes" data-view-link="heroes">Heroes</a>
+        <a class="main-tab" href="#towers" data-view-link="towers">Towers</a>
+        <a class="main-tab" href="#stages" data-view-link="stages">Stages</a>
+        <a class="main-tab" href="#abilities" data-view-link="abilities">Abilities</a>
+        <a class="main-tab" href="#mechanics" data-view-link="mechanics">Mechanics</a>
+      </nav>
+      <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle dark mode">◐</button>
+    </header>
+
+    <main>
+      <section class="view-panel" id="heroes">
+        <div class="section-bar">
+          <div><span class="section-number">01</span><h1>Heroes</h1></div>
+          <span class="section-count">12 heroes · level 1–20</span>
+        </div>
+        <div class="toolbar">
+          <label class="search-box"><span>⌕</span><input id="heroSearch" type="search" placeholder="Search heroes or abilities" autocomplete="off" /><kbd>/</kbd></label>
+          <div class="filter-pills" id="heroFilters" role="tablist" aria-label="Hero filters"></div>
+        </div>
+        <div class="hero-layout">
+          <aside class="hero-list" id="heroList" aria-label="Heroes"></aside>
+          <article class="hero-detail" id="heroDetail" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="view-panel hidden" id="towers">
+        <div class="section-bar">
+          <div><span class="section-number">02</span><h1>Towers</h1></div>
+          <span class="section-count">22 towers · 3 paths each</span>
+        </div>
+        <div class="toolbar">
+          <label class="search-box"><span>⌕</span><input id="towerSearch" type="search" placeholder="Search towers or upgrades" autocomplete="off" /><kbd>/</kbd></label>
+          <div class="filter-pills" id="towerFilters" role="tablist" aria-label="Tower class filters"></div>
+        </div>
+        <div class="tower-picker" id="towerPicker" aria-label="Towers"></div>
+        <article class="tower-detail" id="towerDetail" aria-live="polite"></article>
+      </section>
+
+      <section class="view-panel hidden reference-section" id="stages">
+        <div class="section-bar">
+          <div><span class="section-number">03</span><h1>Stages</h1></div>
+          <span class="section-count">33 maps · reverse variants</span>
+        </div>
+        <div class="toolbar">
+          <label class="search-box"><span>⌕</span><input id="stageSearch" type="search" placeholder="Search stages" autocomplete="off" /><kbd>/</kbd></label>
+          <div class="filter-pills" id="stageFilters" role="tablist" aria-label="Stage availability filters"></div>
+        </div>
+        <p class="stage-note">Availability groups are community labels; the game does not display official map difficulty categories.</p>
+        <div class="stage-list" id="stageList"></div>
+      </section>
+
+      <section class="view-panel hidden reference-section" id="abilities">
+        <div class="section-bar">
+          <div><span class="section-number">04</span><h1>Abilities</h1></div>
+          <span class="section-count">hero ability unlocks</span>
+        </div>
+        <div class="ability-directory" id="abilityDirectory"></div>
+      </section>
+
+      <section class="view-panel hidden reference-section" id="mechanics">
+        <div class="section-bar">
+          <div><span class="section-number">05</span><h1>Mechanics</h1></div>
+          <span class="section-count">common rules and interactions</span>
+        </div>
+        <div class="reference-grid">
+          <article class="reference-card">
+            <span class="reference-label">Tower classes</span>
+            <dl>
+              <div><dt>Primary</dt><dd>Dart, Boomerang, Bomb, Tack, Ice, Glue</dd></div>
+              <div><dt>Military</dt><dd>Sniper, Sub, Buccaneer, Ace, Heli, Mortar, Dartling</dd></div>
+              <div><dt>Magic</dt><dd>Wizard, Super, Ninja, Druid, Alchemist</dd></div>
+              <div><dt>Support</dt><dd>Farm, Village, Spike Factory, Engineer</dd></div>
+            </dl>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">Upgrade rules</span>
+            <ul>
+              <li>One path can reach tier 5.</li>
+              <li>The second path is a crosspath and normally stops at tier 2.</li>
+              <li>Tier 3 and above usually define the tower's role.</li>
+              <li>Crosspaths commonly add range, pierce, speed, lead, or camo coverage.</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">Common checks</span>
+            <ul>
+              <li>Camo detection is separate from range.</li>
+              <li>Lead popping is separate from damage.</li>
+              <li>Purple Bloons block magic, fire, and plasma damage.</li>
+              <li>MOAB control includes slow, stun, knockback, and damage over time.</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <span class="reference-label">Hero milestones</span>
+            <ul>
+              <li>Most heroes gain their first ability at level 3.</li>
+              <li>Most heroes gain their main second ability at level 10.</li>
+              <li>Ezili and Adora have a third ability at level 7.</li>
+              <li>Jericho's sabotage kit starts at levels 2 and 3.</li>
+              <li>Level 20 is the final upgrade and usually improves the main ability.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
